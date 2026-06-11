@@ -77,7 +77,7 @@ export default function Navbar() {
         <a
           href="#hero"
           onClick={(e) => handleLinkClick(e, "#hero")}
-          className="text-lg font-extrabold text-[#f4f4f5] tracking-tight hover:text-[#06b6d4] transition-colors"
+          className="text-2xl font-extrabold text-[#f4f4f5] tracking-tight hover:text-[#06b6d4] transition-colors"
         >
           TAD<span className="text-[#06b6d4]">.dev</span>
         </a>
@@ -92,7 +92,7 @@ export default function Navbar() {
                 key={link.key}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className={`font-sans text-[11px] font-medium tracking-wider transition-all relative py-1 uppercase ${
+                className={`font-sans text-[13px] font-semibold tracking-wider transition-all relative py-1 uppercase ${
                   isActive
                     ? "text-[#f4f4f5] font-bold"
                     : "text-[#a1a1aa] hover:text-[#f4f4f5] hover:font-bold"
@@ -112,16 +112,16 @@ export default function Navbar() {
         </div>
 
         {/* Action Button & Language Dropdown */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-5">
           {/* Language Selector Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center gap-1.5 font-mono text-[10px] text-zinc-400 hover:text-[#06b6d4] transition-colors uppercase border border-[#18181b] bg-[#0c0c0e]/50 px-2.5 py-1.5 rounded-sm cursor-pointer select-none active:scale-95"
+              className="flex items-center gap-2 font-mono text-xs text-zinc-400 hover:text-[#06b6d4] transition-colors uppercase border border-[#18181b] bg-[#0c0c0e]/50 px-3.5 py-2.5 rounded-sm cursor-pointer select-none active:scale-95"
             >
-              <IconGlobe size={11} className="text-[#06b6d4]" />
+              <IconGlobe size={14} className="text-[#06b6d4]" />
               <span>{language}</span>
-              <IconChevronDown size={10} className={`text-zinc-500 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
+              <IconChevronDown size={12} className={`text-zinc-500 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
             </button>
 
             <AnimatePresence>
@@ -131,7 +131,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.95 }}
                   transition={{ duration: 0.15, ease: "easeOut" }}
-                  className="absolute right-0 mt-1.5 w-24 bg-[#0c0c0e]/95 backdrop-blur-md border border-[#18181b] rounded-sm py-1 z-50 shadow-2xl origin-top-right"
+                  className="absolute right-0 mt-1.5 w-28 bg-[#0c0c0e]/95 backdrop-blur-md border border-[#18181b] rounded-sm py-1 z-50 shadow-2xl origin-top-right"
                 >
                   {(["en", "vi", "ru"] as const).map((lang) => (
                     <button
@@ -140,7 +140,7 @@ export default function Navbar() {
                         setLanguage(lang);
                         setIsDropdownOpen(false);
                       }}
-                      className={`w-full text-left font-mono text-[10px] px-3 py-1.5 hover:bg-[#18181b] transition-colors uppercase flex items-center justify-between ${
+                      className={`w-full text-left font-mono text-xs px-3.5 py-2 hover:bg-[#18181b] transition-colors uppercase flex items-center justify-between ${
                         language === lang ? "text-[#06b6d4] font-semibold" : "text-zinc-400 hover:text-[#f4f4f5]"
                       }`}
                     >
@@ -156,9 +156,9 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={(e) => handleLinkClick(e, "#contact")}
-            className="flex items-center gap-2 font-mono text-[10px] text-[#06b6d4] px-4 py-2 border border-[#06b6d4]/30 rounded-sm bg-[#06b6d4]/5 hover:bg-[#06b6d4] hover:text-[#050507] transition-all duration-200 active:scale-95 font-semibold"
+            className="flex items-center gap-2.5 font-mono text-xs text-[#06b6d4] px-5 py-3 border border-[#06b6d4]/30 rounded-sm bg-[#06b6d4]/5 hover:bg-[#06b6d4] hover:text-[#050507] transition-all duration-200 active:scale-95 font-semibold"
           >
-            <IconTerminal size={12} />
+            <IconTerminal size={14} />
             <span>{t.nav.btnContact}</span>
           </a>
         </div>
