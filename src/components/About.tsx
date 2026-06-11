@@ -174,8 +174,8 @@ export default function About() {
             <div className="absolute w-26 h-26 border-[3.5px] border-[#06b6d4]/40 rounded-full blur-[1px] shadow-[0_0_20px_rgba(6,182,212,0.25),_inset_0_0_20px_rgba(6,182,212,0.25)] scale-y-[0.35] rotate-[12deg] animate-spin [animation-duration:25s] [animation-direction:reverse]" />
             <div className="w-18 h-18 bg-neutral-950 border border-[#06b6d4]/30 rounded-full flex flex-col items-center justify-center shadow-[0_0_25px_rgba(6,182,212,0.15)] relative">
               <div className="w-13 h-13 rounded-full bg-black flex flex-col items-center justify-center">
-                <span className="font-mono text-[8px] text-[#06b6d4] font-bold leading-none tracking-widest">BLACK</span>
-                <span className="font-mono text-[7px] text-zinc-500 font-bold tracking-widest mt-0.5">HOLE</span>
+                <span className="font-mono text-[8px] text-[#06b6d4] font-bold leading-none tracking-widest">CORE</span>
+                <span className="font-mono text-[7px] text-zinc-500 font-bold tracking-widest mt-0.5">SYSTEMS</span>
               </div>
             </div>
           </div>

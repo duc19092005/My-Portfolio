@@ -9,32 +9,32 @@ export const translations = {
       btnContact: "CONTACT.sh"
     },
     hero: {
-      eyebrow: "SYSTEMS_ACTIVE",
+      eyebrow: "System Online",
       title: "TRẦN ANH ĐỨC",
-      subtitle: "Backend Developer / Systems Engineer",
+      subtitle: "Backend Developer | Building scalable & reliable systems",
       subtext: "Building highly scalable backend services and robust system architectures. Specializing in secure API design, database performance optimization, and reliable infrastructure.",
       btnProjects: "View My Projects",
       btnContact: "Get In Touch",
-      monitorTitle: "SYS_MONITOR",
+      monitorTitle: "System Overview",
       portBind: "PORT_BIND",
       database: "DATABASE",
       env: "ENV",
       envValue: "Production"
     },
     about: {
-      eyebrow: "01 // ARCHITECTURE",
-      title: "BEHIND THE SYSTEMS",
+      eyebrow: "01 // PROFILE",
+      title: "About Me",
       bioParagraphs: [
         "I am a Software Engineering student at HUFLIT University specializing in backend systems and database engineering. I design and build resilient, distributed backend architectures that optimize performance and scale under pressure.",
         "Leveraging technologies like .NET/ASP.NET Core and Node.js (ExpressJS), I focus on clean code design patterns, modular services, and secure API integrations to build reliable real-world systems.",
         "My analytical approach and hackathon experience have trained me to solve complex infrastructural problems under strict deadlines, working to construct backend architectures that prioritize uptime, thread safety, and decoupled dependencies."
       ],
-      timelineTitle: "SYSTEM CHRONOLOGY",
+      timelineTitle: "Experience",
       timelineItems: [
         {
           date: "2026.Q1 — 2026.Q2",
           title: "Cinema Management System",
-          desc: "Solo Project: Architected decoupled backend with 30+ RESTful APIs using ASP.NET Core & MS SQL."
+          desc: "Independent Project: Architected decoupled backend with 30+ RESTful APIs using ASP.NET Core & MS SQL."
         },
         {
           date: "2025.Q4",
@@ -49,8 +49,8 @@ export const translations = {
       ]
     },
     skills: {
-      eyebrow: "02 // CAPABILITIES",
-      title: "SKILLS INVENTORY",
+      eyebrow: "02 // EXPERTISE",
+      title: "Skills & Technologies",
       groups: {
         languages: "Programming Languages",
         frameworks: "Frameworks & ORMs",
@@ -64,17 +64,17 @@ export const translations = {
       ]
     },
     projects: {
-      eyebrow: "03 // ARTIFACTS",
-      title: "PROJECTS LOG",
-      badgeSolo: "SOLO DEV",
-      badgeHackathon: "3RD PLACE HACKATHON",
+      eyebrow: "03 // PROJECTS",
+      title: "Featured Projects",
+      badgeSolo: "Independent Developer",
+      badgeHackathon: "3rd Place - Pione Hackathon 2025",
       repoLink: "Repository",
       liveLink: "Live Demo",
       videoLink: "Demo Video",
       items: {
         cinema: {
           title: "CINEMA MANAGEMENT SYSTEM",
-          role: "Backend Developer (Solo Project)",
+          role: "Backend Developer (Independent Project)",
           desc: [
             "Designed and built a modular backend from scratch using ASP.NET Core and MS SQL, applying SOLID principles and the Factory pattern.",
             "Implemented secure token-based authentication (JWT) with Role-Based Access Control (RBAC) stored via secure HttpOnly cookies.",
@@ -93,14 +93,14 @@ export const translations = {
       }
     },
     achievements: {
-      eyebrow: "04 // SIGNALS",
+      eyebrow: "04 // RECOGNITIONS",
       title: "Pione Hackathon 2025",
       subtitle: "3rd Place · Team: Dev Chicken HUFLIT",
       desc: "Awarded 3rd place for developing the decentralized 'Drug Traceability' platform, co-designing the database logs, and establishing API integrations with smart contracts."
     },
     contact: {
-      eyebrow: "05 // CONNECTION",
-      title: "GET IN TOUCH",
+      eyebrow: "05 // CONTACT",
+      title: "Get In Touch",
       subtext: "I am currently seeking Backend Developer Intern & Junior positions to collaborate on real-world systems. Drop me a line, and let's build something secure and scalable together.",
       address: "Binh Thanh District, Ho Chi Minh City, Vietnam",
       labelName: "SENDER NAME",
@@ -131,40 +131,40 @@ export const translations = {
   },
   vi: {
     nav: {
-      about: "GIỚI THIỆU",
+      about: "VỀ TÔI",
       skills: "KỸ NĂNG",
       projects: "DỰ ÁN",
-      awards: "GIẢI THƯỞNG",
+      awards: "THÀNH TỰU",
       contact: "LIÊN HỆ",
       btnContact: "LIEN_HE.sh"
     },
     hero: {
-      eyebrow: "HE_THONG_KICH_HOAT",
+      eyebrow: "System Online",
       title: "TRẦN ANH ĐỨC",
-      subtitle: "Lập trình viên Backend / Kỹ sư Hệ thống",
+      subtitle: "Backend Developer | Xây dựng hệ thống scalable & đáng tin cậy",
       subtext: "Xây dựng các dịch vụ backend hiệu năng cao và kiến trúc hệ thống bền vững. Chuyên sâu về thiết kế API bảo mật, tối ưu hóa cơ sở dữ liệu và hạ tầng đáng tin cậy.",
       btnProjects: "Xem Dự Án Của Tôi",
       btnContact: "Liên Hệ Ngay",
-      monitorTitle: "BANG_GIAM_SAT",
+      monitorTitle: "System Overview",
       portBind: "CONG_KET_NOI",
       database: "CO_SO_DU_LIEU",
       env: "MOI_TRUONG",
       envValue: "Vận hành (Production)"
     },
     about: {
-      eyebrow: "01 // KIẾN TRÚC",
-      title: "PHÍA SAU HỆ THỐNG",
+      eyebrow: "01 // VỀ TÔI",
+      title: "Hành trình Backend",
       bioParagraphs: [
         "Tôi là sinh viên ngành Kỹ thuật Phần mềm tại Đại học HUFLIT, chuyên sâu về kỹ thuật hệ thống backend và cơ sở dữ liệu. Tôi thiết kế và xây dựng các kiến trúc backend phân tán bền vững, giúp tối ưu hóa hiệu năng và mở rộng dưới áp lực lớn.",
         "Sử dụng các công nghệ như .NET/ASP.NET Core và Node.js (ExpressJS), tôi tập trung vào các mẫu thiết kế mã nguồn sạch, dịch vụ mô-đun và tích hợp API bảo mật nhằm xây dựng các hệ thống thực tế đáng tin cậy.",
         "Tư duy phân tích và kinh nghiệm thi đấu hackathon đã giúp tôi rèn luyện kỹ năng giải quyết các vấn đề hạ tầng phức tạp dưới áp lực thời gian, hướng đến việc kiến thiết các hệ thống tối ưu hóa thời gian hoạt động, an toàn luồng và giảm thiểu phụ thuộc."
       ],
-      timelineTitle: "LỊCH SỬ HỆ THỐNG",
+      timelineTitle: "Timeline Kinh nghiệm",
       timelineItems: [
         {
           date: "Q1.2026 — Q2.2026",
           title: "Hệ thống Quản lý Rạp chiếu phim",
-          desc: "Dự án cá nhân: Thiết kế kiến trúc backend độc lập với hơn 30 RESTful APIs bằng ASP.NET Core & MS SQL."
+          desc: "Independent Project: Thiết kế kiến trúc backend độc lập với hơn 30 RESTful APIs bằng ASP.NET Core & MS SQL."
         },
         {
           date: "Q4.2025",
@@ -179,8 +179,8 @@ export const translations = {
       ]
     },
     skills: {
-      eyebrow: "02 // NĂNG LỰC",
-      title: "DANH MỤC KỸ NĂNG",
+      eyebrow: "02 // KỸ NĂNG",
+      title: "Skills & Technologies",
       groups: {
         languages: "Ngôn ngữ lập trình",
         frameworks: "Frameworks & ORMs",
@@ -194,17 +194,17 @@ export const translations = {
       ]
     },
     projects: {
-      eyebrow: "03 // DỮ LIỆU DỰ ÁN",
-      title: "NHẬT KÝ DỰ ÁN",
-      badgeSolo: "SOLO DEV",
-      badgeHackathon: "GIẢI BA HACKATHON",
+      eyebrow: "03 // DỰ ÁN",
+      title: "Featured Projects",
+      badgeSolo: "Independent Developer",
+      badgeHackathon: "3rd Place - Pione Hackathon 2025",
       repoLink: "Mã Nguồn",
       liveLink: "Bản Demo",
       videoLink: "Video Demo",
       items: {
         cinema: {
           title: "HỆ THỐNG QUẢN LÝ RẠP CHIẾU PHIM",
-          role: "Lập trình viên Backend (Dự án Cá nhân)",
+          role: "Lập trình viên Backend (Independent Project)",
           desc: [
             "Thiết kế và xây dựng kiến trúc backend dạng tách biệt (decoupled) từ đầu, áp dụng nguyên lý SOLID và Factory pattern.",
             "Triển khai cơ chế xác thực JWT kết hợp phân quyền RBAC bảo mật cao, lưu trữ token thông qua HttpOnly Cookies để chống tấn công đánh cắp phiên.",
@@ -223,14 +223,14 @@ export const translations = {
       }
     },
     achievements: {
-      eyebrow: "04 // TÍN HIỆU",
+      eyebrow: "04 // THÀNH TỰU",
       title: "Pione Hackathon 2025",
       subtitle: "Giải Ba · Đội tuyển: Dev Chicken HUFLIT",
       desc: "Đoạt giải Ba chung cuộc nhờ phát triển ứng dụng phi tập trung 'Truy xuất nguồn gốc thuốc', thiết kế cấu trúc lưu trữ cơ sở dữ liệu và tích hợp API với các smart contract trên blockchain."
     },
     contact: {
-      eyebrow: "05 // KẾT NỐI",
-      title: "GỬI TIN NHẮN",
+      eyebrow: "05 // LIÊN HỆ",
+      title: "Get In Touch",
       subtext: "Tôi hiện đang tìm kiếm cơ hội thực tập và vị trí Junior Backend Developer để cống hiến cho các dự án thực tế. Hãy để lại tin nhắn và cùng nhau xây dựng các hệ thống bảo mật, ổn định.",
       address: "Quận Bình Thạnh, TP. Hồ Chí Minh, Việt Nam",
       labelName: "TÊN NGƯỜI GỬI",
@@ -246,16 +246,16 @@ export const translations = {
       msgError: "Lỗi: Vui lòng nhập đầy đủ các trường thông tin."
     },
     footer: {
-      about: "GIỚI THIỆU",
+      about: "VỀ TÔI",
       projects: "DỰ ÁN",
       github: "GITHUB"
     },
     sidenav: {
       hero: "TRANG ĐẦU",
-      about: "GIỚI THIỆU",
+      about: "VỀ TÔI",
       skills: "KỸ NĂNG",
       projects: "DỰ ÁN",
-      awards: "GIẢI THƯỞNG",
+      awards: "THÀNH TỰU",
       contact: "LIÊN HỆ"
     }
   },
@@ -264,37 +264,37 @@ export const translations = {
       about: "ОБ АВТОРЕ",
       skills: "НАВЫКИ",
       projects: "ПРОЕКТЫ",
-      awards: "НАГРАДЫ",
+      awards: "ДОСТИЖЕНИЯ",
       contact: "КОНТАКТЫ",
       btnContact: "CONTACT.sh"
     },
     hero: {
-      eyebrow: "SYSTEMS_ACTIVE",
+      eyebrow: "System Online",
       title: "TRẦN ANH ĐỨC",
-      subtitle: "Backend-разработчик / Системный инженер",
+      subtitle: "Backend Developer | Разработка масштабируемых и надежных систем",
       subtext: "Разработка высокомасштабируемых серверных служб и надежных системных архитектур. Специализируюсь на безопасном проектировании API, оптимизации баз данных и надежной инфраструктуре.",
       btnProjects: "Посмотреть Мои Проекты",
       btnContact: "Связаться Со Мной",
-      monitorTitle: "SYS_MONITOR",
+      monitorTitle: "System Overview",
       portBind: "PORT_BIND",
       database: "БАЗА ДАННЫХ",
       env: "СРЕДА",
       envValue: "Продакшн"
     },
     about: {
-      eyebrow: "01 // АРХИТЕКТУРА",
-      title: "ЗА КУЛИСАМИ СИСТЕМ",
+      eyebrow: "01 // ПРОФИЛЬ",
+      title: "Обо мне",
       bioParagraphs: [
         "Я студент факультета программной инженерии в Университете HUFLIT, специализируюсь на бэкенд-системах и проектировании баз данных. Я проектирую и создаю отказоустойчивые, распределенные бэкенд-архитектуры, которые оптимизируют производительность и масштабируются под высокой нагрузкой.",
         "Используя такие технологии, как .NET/ASP.NET Core и Node.js (ExpressJS), я сосредотачиваюсь на шаблонах чистого кода, модульных сервисах и безопасной интеграции API для создания надежных реальных систем.",
         "Мой аналитический подход и опыт участия в хакатонах помогли мне научиться решать сложные инфраструктурные задачи в сжатые сроки, создавая бэкенд-архитектуры с приоритетом на доступность (uptime), потокобезопасность (thread safety) и развязку зависимостей (decoupling)."
       ],
-      timelineTitle: "СИСТЕМНАЯ ХРОНОЛОГИЯ",
+      timelineTitle: "Опыт работы",
       timelineItems: [
         {
           date: "2026.Q1 — 2026.Q2",
           title: "Система Управления Кинотеатром",
-          desc: "Сольный проект: Разработал модульный бэкенд с более чем 30 RESTful API с использованием ASP.NET Core и MS SQL."
+          desc: "Independent Project: Разработал модульный бэкенд с более чем 30 RESTful API с использованием ASP.NET Core и MS SQL."
         },
         {
           date: "2025.Q4",
@@ -309,8 +309,8 @@ export const translations = {
       ]
     },
     skills: {
-      eyebrow: "02 // ВОЗМОЖНОСТИ",
-      title: "КАРТА НАВЫКОВ",
+      eyebrow: "02 // ЭКСПЕРТИЗА",
+      title: "Skills & Technologies",
       groups: {
         languages: "Языки программирования",
         frameworks: "Фреймворки и ORM",
@@ -324,17 +324,17 @@ export const translations = {
       ]
     },
     projects: {
-      eyebrow: "03 // АРТИФАКТЫ",
-      title: "ЖУРНАЛ ПРОЕКТОВ",
-      badgeSolo: "SOLO DEV",
-      badgeHackathon: "3-Е МЕСТО НА ХАКАТОНЕ",
+      eyebrow: "03 // ПРОЕКТЫ",
+      title: "Featured Projects",
+      badgeSolo: "Independent Developer",
+      badgeHackathon: "3rd Place - Pione Hackathon 2025",
       repoLink: "Репозиторий",
       liveLink: "Демо-версия",
       videoLink: "Видео Демо",
       items: {
         cinema: {
           title: "СИСТЕМА УПРАВЛЕНИЯ КИНОТЕАТРОМ",
-          role: "Backend-разработчик (Сольный проект)",
+          role: "Backend Developer (Independent Project)",
           desc: [
             "Разработал модульный бэкенд с нуля с использованием ASP.NET Core и MS SQL, применяя принципы SOLID и шаблон проектирования Factory.",
             "Внедрил безопасную авторизацию на основе JWT с разграничением ролей доступа (RBAC), токены сохраняются в защищенных куках HttpOnly.",
@@ -342,7 +342,7 @@ export const translations = {
           ]
         },
         traceability: {
-          title: "DAPP ОТСЛЕЖИВАНИЯ ЛЕКАРСТВ",
+          title: "DAPP ОТСЛЕЖИВАНИЯ LEKARSTV",
           role: "Backend и Blockchain разработчик",
           desc: [
             "Совместно разработал децентрализованный бэкенд на ExpressJS и MongoDB с соблюдением подходов Domain-Driven Design (DDD).",
@@ -353,14 +353,14 @@ export const translations = {
       }
     },
     achievements: {
-      eyebrow: "04 // СИГНАЛЫ",
+      eyebrow: "04 // ДОСТИЖЕНИЯ",
       title: "Pione Hackathon 2025",
       subtitle: "3-е место · Команда: Dev Chicken HUFLIT",
       desc: "Награжден 3-м местом за создание платформы 'Drug Traceability', совместное проектирование баз данных бэкенда и интеграцию API со смарт-контрактами."
     },
     contact: {
-      eyebrow: "05 // СВЯЗЬ",
-      title: "НАПИСАТЬ МНЕ",
+      eyebrow: "05 // КОНТАКТЫ",
+      title: "Get In Touch",
       subtext: "В данный момент я ищу вакансии Backend Developer Intern / Junior для участия в коммерческих проектах. Оставьте сообщение, и давайте построим надежную систему вместе.",
       address: "Район Биньтхань, Хошимин, Вьетнам",
       labelName: "ИМЯ ОТПРАВИТЕЛЯ",
@@ -385,7 +385,7 @@ export const translations = {
       about: "ОБ АВТОРЕ",
       skills: "НАВЫКИ",
       projects: "ПРОЕКТЫ",
-      awards: "НАГРАДЫ",
+      awards: "ДОСТИЖЕНИЯ",
       contact: "КОНТАКТЫ"
     }
   }
