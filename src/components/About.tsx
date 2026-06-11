@@ -184,18 +184,18 @@ export default function About() {
           <div
             planet-id="dotnet"
             ref={planet1Ref}
-            className="absolute w-16 h-16 flex items-center justify-center border border-[#06b6d4]/30 bg-[radial-gradient(circle_at_30%_30%,#f4f4f5_10%,#71717a_50%,#18181b_100%)] rounded-full shadow-[0_8px_16px_rgba(0,0,0,0.65),_0_0_15px_rgba(6,182,212,0.2)] pointer-events-auto select-none"
+            className="absolute w-16 h-16 flex items-center justify-center border border-[#06b6d4]/40 bg-[radial-gradient(circle_at_30%_30%,#ffffff_20%,#a1a1aa_60%,#18181b_100%)] rounded-full shadow-[0_8px_16px_rgba(0,0,0,0.65),_0_0_15px_rgba(6,182,212,0.2)] pointer-events-auto select-none"
           >
-            <span className="font-mono text-[10px] text-zinc-300 font-bold">.NET</span>
+            <span className="font-mono text-[10px] text-zinc-950 font-extrabold">.NET</span>
           </div>
 
           {/* Planet 2: Node.js */}
           <div
             planet-id="nodejs"
             ref={planet2Ref}
-            className="absolute w-16 h-16 flex items-center justify-center border border-[#06b6d4]/30 bg-[radial-gradient(circle_at_30%_30%,#34d399_10%,#059669_50%,#022c22_100%)] rounded-full shadow-[0_8px_16px_rgba(0,0,0,0.65),_0_0_15px_rgba(52,211,153,0.2)] pointer-events-auto select-none"
+            className="absolute w-16 h-16 flex items-center justify-center border border-[#06b6d4]/40 bg-[radial-gradient(circle_at_30%_30%,#a7f3d0_20%,#059669_60%,#022c22_100%)] rounded-full shadow-[0_8px_16px_rgba(0,0,0,0.65),_0_0_15px_rgba(52,211,153,0.2)] pointer-events-auto select-none"
           >
-            <span className="font-mono text-[9px] text-emerald-100 font-bold">NODE.JS</span>
+            <span className="font-mono text-[9px] text-emerald-950 font-extrabold">NODE.JS</span>
           </div>
         </motion.div>
       </div>
