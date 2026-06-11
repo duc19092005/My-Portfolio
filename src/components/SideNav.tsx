@@ -1,22 +1,24 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import { useLanguage } from "../context/LanguageContext";
 
 interface SideLink {
-  label: string;
+  key: "hero" | "about" | "skills" | "projects" | "awards" | "contact";
   href: string;
 }
 
 const sideLinks: SideLink[] = [
-  { label: "HERO", href: "#hero" },
-  { label: "ABOUT", href: "#about" },
-  { label: "SKILLS", href: "#skills" },
-  { label: "PROJECTS", href: "#projects" },
-  { label: "AWARDS", href: "#achievements" },
-  { label: "CONTACT", href: "#contact" },
+  { key: "hero", href: "#hero" },
+  { key: "about", href: "#about" },
+  { key: "skills", href: "#skills" },
+  { key: "projects", href: "#projects" },
+  { key: "awards", href: "#achievements" },
+  { key: "contact", href: "#contact" },
 ];
 
 export default function SideNav() {
   const [activeSection, setActiveSection] = useState("hero");
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,18 +64,19 @@ export default function SideNav() {
       {sideLinks.map((link) => {
         const targetId = link.href.substring(1);
         const isActive = activeSection === targetId;
+        const label = t.sidenav[link.key];
 
         return (
           <a
-            key={link.label}
+            key={link.key}
             href={link.href}
             onClick={(e) => handleClick(e, link.href)}
             className="relative flex items-center justify-center p-2 group cursor-pointer z-10"
-            aria-label={`Scroll to ${link.label}`}
+            aria-label={`Scroll to ${label}`}
           >
             {/* Tooltip Label (slides out on hover) */}
             <span className="absolute right-8 font-mono text-[9px] text-zinc-500 tracking-widest bg-[#0c0c0e] border border-[#18181b] px-2 py-0.5 rounded-sm opacity-0 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#06b6d4] transition-all duration-200 shadow-lg">
-              {link.label}
+              {label}
             </span>
 
             {/* Glowing Active Ring */}

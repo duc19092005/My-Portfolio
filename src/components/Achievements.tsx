@@ -1,7 +1,10 @@
 import { motion } from "motion/react";
 import { IconAward } from "@tabler/icons-react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Achievements() {
+  const { t } = useLanguage();
+
   return (
     <section 
       id="achievements" 
@@ -21,19 +24,19 @@ export default function Achievements() {
           </div>
 
           <div className="mt-4 font-mono text-[10px] text-[#06b6d4] tracking-[0.25em] block mb-2 uppercase font-bold">
-            04 // SIGNALS
+            {t.achievements.eyebrow}
           </div>
           
           <h3 className="font-sans text-xl font-extrabold text-[#f4f4f5] mb-3 uppercase tracking-wider">
-            Pione Hackathon 2025
+            {t.achievements.title}
           </h3>
           
           <h4 className="font-mono text-sm text-[#06b6d4] font-bold mb-4 uppercase">
-            3rd Place · Team: Dev Chicken HUFLIT
+            {t.achievements.subtitle}
           </h4>
           
           <p className="font-sans text-sm text-[#a1a1aa] leading-relaxed max-w-md mx-auto">
-            Awarded 3rd place for developing the decentralized "Drug Traceability" platform, co-designing the database logs, and establishing API integrations with smart contracts.
+            {t.achievements.desc}
           </p>
         </motion.div>
       </div>

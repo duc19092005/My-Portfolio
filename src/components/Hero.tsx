@@ -1,7 +1,10 @@
 import { motion } from "motion/react";
 import { IconArrowRight, IconTerminal } from "@tabler/icons-react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   const handleScrollClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.substring(1);
@@ -33,21 +36,21 @@ export default function Hero() {
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#18181b] bg-[#0c0c0e] mb-6">
             <IconTerminal size={12} className="text-[#06b6d4]" />
-            <span className="font-mono text-[10px] tracking-widest text-[#a1a1aa] uppercase">SYSTEMS_ACTIVE</span>
+            <span className="font-mono text-[10px] tracking-widest text-[#a1a1aa] uppercase">{t.hero.eyebrow}</span>
           </div>
 
           {/* Headline */}
           <h1 className="font-sans text-5xl md:text-7xl font-extrabold tracking-tight text-[#f4f4f5] leading-none mb-6">
-            TRẦN ANH ĐỨC
+            {t.hero.title}
           </h1>
           
           <h2 className="text-lg md:text-xl font-mono text-[#06b6d4] mb-6 font-semibold tracking-wide uppercase">
-            Backend Developer / Systems Engineer
+            {t.hero.subtitle}
           </h2>
 
           {/* Subtext */}
           <p className="text-base md:text-lg text-[#a1a1aa] max-w-2xl mb-8 leading-relaxed">
-            Building highly scalable backend services and robust system architectures. Specializing in secure API design, database performance optimization, and reliable infrastructure.
+            {t.hero.subtext}
           </p>
 
           {/* CTAs */}
@@ -57,7 +60,7 @@ export default function Hero() {
               onClick={(e) => handleScrollClick(e, "#projects")}
               className="inline-flex items-center gap-2 bg-[#f4f4f5] text-[#050507] hover:bg-[#e4e4e7] transition-all px-6 py-3 rounded-sm font-semibold text-sm cursor-pointer shadow-lg active:scale-95"
             >
-              <span>View My Projects</span>
+              <span>{t.hero.btnProjects}</span>
               <IconArrowRight size={16} />
             </a>
             <a
@@ -65,7 +68,7 @@ export default function Hero() {
               onClick={(e) => handleScrollClick(e, "#contact")}
               className="inline-flex items-center gap-2 border border-[#18181b] hover:border-zinc-700 bg-[#0c0c0e] text-[#f4f4f5] transition-all px-6 py-3 rounded-sm font-medium text-sm cursor-pointer active:scale-95"
             >
-              <span>Get In Touch</span>
+              <span>{t.hero.btnContact}</span>
             </a>
           </div>
         </motion.div>
@@ -80,7 +83,7 @@ export default function Hero() {
           <div className="absolute w-64 h-64 bg-[#06b6d4]/5 rounded-full blur-3xl pointer-events-none" />
           <div className="border border-[#18181b] bg-[#0c0c0e] p-8 rounded-sm w-72 h-72 flex flex-col justify-between relative shadow-2xl">
             <div className="flex justify-between items-start">
-              <span className="font-mono text-[10px] text-[#06b6d4] font-bold">SYS_MONITOR</span>
+              <span className="font-mono text-[10px] text-[#06b6d4] font-bold">{t.hero.monitorTitle}</span>
               <div className="w-2 h-2 rounded-full bg-[#06b6d4] animate-pulse" />
             </div>
             
@@ -98,16 +101,16 @@ export default function Hero() {
 
             <div className="space-y-2 font-mono text-xs text-[#a1a1aa]">
               <div className="flex justify-between border-b border-[#18181b]/50 pb-1">
-                <span>PORT_BIND</span>
+                <span>{t.hero.portBind}</span>
                 <span className="text-[#f4f4f5]">8080</span>
               </div>
               <div className="flex justify-between border-b border-[#18181b]/50 pb-1">
-                <span>DATABASE</span>
+                <span>{t.hero.database}</span>
                 <span className="text-[#f4f4f5]">SQL Server</span>
               </div>
               <div className="flex justify-between border-b border-[#18181b]/50 pb-1">
-                <span>ENV</span>
-                <span className="text-teal-400">Production</span>
+                <span>{t.hero.env}</span>
+                <span className="text-teal-400">{t.hero.envValue}</span>
               </div>
             </div>
           </div>

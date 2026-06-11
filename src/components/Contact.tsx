@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { IconMail, IconPhone, IconMapPin, IconBrandGithub, IconSend } from "@tabler/icons-react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -41,13 +43,13 @@ export default function Contact() {
         >
           <div>
             <span className="font-mono text-xs text-[#06b6d4] tracking-widest block mb-2 uppercase font-bold">
-              05 // CONNECTION
+              {t.contact.eyebrow}
             </span>
             <h2 className="font-sans text-4xl font-extrabold text-[#f4f4f5] mb-6 uppercase tracking-wide">
-              GET IN TOUCH
+              {t.contact.title}
             </h2>
             <p className="font-sans text-base text-[#a1a1aa] mb-10 max-w-md leading-relaxed">
-              I am currently seeking Backend Developer Intern & Junior positions to collaborate on real-world systems. Drop me a line, and let's build something secure and scalable together.
+              {t.contact.subtext}
             </p>
 
             {/* Direct Information */}
@@ -72,7 +74,7 @@ export default function Contact() {
               </div>
               <div className="flex items-start gap-3">
                 <IconMapPin size={16} className="text-[#06b6d4] shrink-0 pt-0.5" />
-                <span>Binh Thanh District, Ho Chi Minh City, Vietnam</span>
+                <span>{t.contact.address}</span>
               </div>
             </div>
           </div>
@@ -110,14 +112,14 @@ export default function Contact() {
             {/* Sender Name */}
             <div className="flex flex-col gap-2">
               <label className="font-mono text-[10px] text-[#a1a1aa] tracking-widest font-bold uppercase">
-                SENDER NAME
+                {t.contact.labelName}
               </label>
               <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full bg-[#050507] border border-[#18181b] focus:border-[#06b6d4] py-2.5 px-4 text-[#f4f4f5] focus:outline-none font-sans text-sm rounded-sm placeholder-zinc-600 transition-colors"
-                placeholder="Your Name"
+                placeholder={t.contact.placeholderName}
                 required
               />
             </div>
@@ -125,14 +127,14 @@ export default function Contact() {
             {/* Sender Email */}
             <div className="flex flex-col gap-2">
               <label className="font-mono text-[10px] text-[#a1a1aa] tracking-widest font-bold uppercase">
-                EMAIL ADDRESS
+                {t.contact.labelEmail}
               </label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-[#050507] border border-[#18181b] focus:border-[#06b6d4] py-2.5 px-4 text-[#f4f4f5] focus:outline-none font-sans text-sm rounded-sm placeholder-zinc-600 transition-colors"
-                placeholder="you@example.com"
+                placeholder={t.contact.placeholderEmail}
                 required
               />
             </div>
@@ -140,14 +142,14 @@ export default function Contact() {
             {/* Message Body */}
             <div className="flex flex-col gap-2">
               <label className="font-mono text-[10px] text-[#a1a1aa] tracking-widest font-bold uppercase">
-                MESSAGE
+                {t.contact.labelMessage}
               </label>
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 rows={4}
                 className="w-full bg-[#050507] border border-[#18181b] focus:border-[#06b6d4] py-2.5 px-4 text-[#f4f4f5] focus:outline-none font-sans text-sm rounded-sm placeholder-zinc-600 resize-none transition-colors"
-                placeholder="Write your message here..."
+                placeholder={t.contact.placeholderMessage}
                 required
               />
             </div>
@@ -162,22 +164,22 @@ export default function Contact() {
               <IconSend size={14} />
               <span>
                 {status === "loading"
-                  ? "SENDING..."
+                  ? t.contact.btnSending
                   : status === "success"
-                  ? "MESSAGE SENT"
-                  : "SEND MESSAGE"}
+                  ? t.contact.btnSuccess
+                  : t.contact.btnSend}
               </span>
             </motion.button>
 
             {/* Status alerts */}
             {status === "success" && (
               <div className="font-sans text-xs text-emerald-400 text-center mt-2">
-                Thank you! Your message has been sent successfully.
+                {t.contact.msgSuccess}
               </div>
             )}
             {status === "error" && (
               <div className="font-sans text-xs text-rose-400 text-center mt-2">
-                Error: Please fill in all fields correctly.
+                {t.contact.msgError}
               </div>
             )}
           </form>

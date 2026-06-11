@@ -1,23 +1,25 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { IconMenu2, IconX, IconTerminal } from "@tabler/icons-react";
+import { useLanguage } from "../context/LanguageContext";
 
 interface NavLink {
-  label: string;
+  key: "about" | "skills" | "projects" | "awards" | "contact";
   href: string;
 }
 
 const links: NavLink[] = [
-  { label: "ABOUT", href: "#about" },
-  { label: "SKILLS", href: "#skills" },
-  { label: "PROJECTS", href: "#projects" },
-  { label: "AWARDS", href: "#achievements" },
-  { label: "CONTACT", href: "#contact" },
+  { key: "about", href: "#about" },
+  { key: "skills", href: "#skills" },
+  { key: "projects", href: "#projects" },
+  { key: "awards", href: "#achievements" },
+  { key: "contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
+  const { language, setLanguage, t } = useLanguage();
 
   // Track scroll position to highlight active link
   useEffect(() => {
@@ -70,9 +72,10 @@ export default function Navbar() {
         <div className="hidden md:flex gap-8 items-center">
           {links.map((link) => {
             const isActive = activeSection === link.href.substring(1);
+            const label = t.nav[link.key];
             return (
               <a
-                key={link.label}
+                key={link.key}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
                 className={`font-mono text-[10px] tracking-widest transition-all relative py-1 ${
@@ -81,7 +84,7 @@ export default function Navbar() {
                     : "text-[#a1a1aa] hover:text-[#f4f4f5]"
                 }`}
               >
-                {link.label}
+                {label}
                 {isActive && (
                   <motion.span
                     layoutId="activeNavLine"
@@ -94,15 +97,31 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Action Button */}
-        <div className="hidden md:block">
+        {/* Action Button & Language Switcher */}
+        <div className="hidden md:flex items-center gap-4">
+          <div className="flex items-center gap-1.5 font-mono text-[10px] text-zinc-500 border-r border-[#18181b] pr-4 h-5">
+            {(["en", "vi", "ru"] as const).map((lang, idx) => (
+              <span key={lang} className="flex items-center gap-1.5">
+                {idx > 0 && <span className="text-zinc-800">/</span>}
+                <button
+                  onClick={() => setLanguage(lang)}
+                  className={`hover:text-[#06b6d4] transition-colors cursor-pointer uppercase ${
+                    language === lang ? "text-[#06b6d4] font-semibold" : "text-zinc-500"
+                  }`}
+                >
+                  {lang}
+                </button>
+              </span>
+            ))}
+          </div>
+
           <a
             href="#contact"
             onClick={(e) => handleLinkClick(e, "#contact")}
             className="flex items-center gap-2 font-mono text-[10px] text-[#06b6d4] px-4 py-2 border border-[#06b6d4]/30 rounded-sm bg-[#06b6d4]/5 hover:bg-[#06b6d4] hover:text-[#050507] transition-all duration-200 active:scale-95 font-semibold"
           >
             <IconTerminal size={12} />
-            <span>CONTACT.sh</span>
+            <span>{t.nav.btnContact}</span>
           </a>
         </div>
 
@@ -129,16 +148,17 @@ export default function Navbar() {
             <div className="flex flex-col px-6 py-6 gap-6">
               {links.map((link) => {
                 const isActive = activeSection === link.href.substring(1);
+                const label = t.nav[link.key];
                 return (
                   <a
-                    key={link.label}
+                    key={link.key}
                     href={link.href}
                     onClick={(e) => handleLinkClick(e, link.href)}
                     className={`font-mono text-xs tracking-widest ${
                       isActive ? "text-[#06b6d4] font-bold" : "text-[#a1a1aa]"
                     }`}
                   >
-                    {link.label}
+                    {label}
                   </a>
                 );
               })}
@@ -148,8 +168,28 @@ export default function Navbar() {
                 className="flex items-center justify-center gap-2 font-mono text-xs text-[#06b6d4] py-3 border border-[#06b6d4]/30 rounded bg-[#06b6d4]/5 hover:bg-[#06b6d4] hover:text-[#050507] transition-all active:scale-95"
               >
                 <IconTerminal size={12} />
-                <span>CONTACT.sh</span>
+                <span>{t.nav.btnContact}</span>
               </a>
+
+              {/* Language Selector in Drawer */}
+              <div className="flex items-center justify-between border-t border-[#18181b] pt-4 mt-2">
+                <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest">locale</span>
+                <div className="flex items-center gap-2 font-mono text-xs text-zinc-500">
+                  {(["en", "vi", "ru"] as const).map((lang, idx) => (
+                    <span key={lang} className="flex items-center gap-2">
+                      {idx > 0 && <span className="text-zinc-800">/</span>}
+                      <button
+                        onClick={() => setLanguage(lang)}
+                        className={`hover:text-[#06b6d4] transition-colors cursor-pointer uppercase ${
+                          language === lang ? "text-[#06b6d4] font-bold" : "text-zinc-500"
+                        }`}
+                      >
+                        {lang}
+                      </button>
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         )}

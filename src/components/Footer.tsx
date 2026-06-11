@@ -1,4 +1,8 @@
+import { useLanguage } from "../context/LanguageContext";
+
 export default function Footer() {
+  const { t } = useLanguage();
+
   const handleScrollTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     window.scrollTo({
@@ -25,13 +29,13 @@ export default function Footer() {
             href="#about"
             className="hover:text-[#06b6d4] transition-colors tracking-widest uppercase"
           >
-            ABOUT
+            {t.footer.about}
           </a>
           <a
             href="#projects"
             className="hover:text-[#06b6d4] transition-colors tracking-widest uppercase"
           >
-            PROJECTS
+            {t.footer.projects}
           </a>
           <a
             href="https://github.com/duc19092005/My-Portfolio"
@@ -39,7 +43,7 @@ export default function Footer() {
             rel="noreferrer"
             className="hover:text-[#06b6d4] transition-colors tracking-widest uppercase"
           >
-            GITHUB
+            {t.footer.github}
           </a>
         </div>
       </div>
