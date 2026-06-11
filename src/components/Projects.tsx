@@ -102,7 +102,7 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <div key={project.id} className="w-full shrink-0 px-2">
-              <div className="border border-zinc-700/60 bg-neutral-950/40 hover:border-amber-300/40 transition-colors duration-300 relative p-6 md:p-8 overflow-hidden rounded-sm">
+              <div className="border border-zinc-700/60 bg-neutral-950/50 backdrop-blur-md hover:border-amber-300/40 transition-colors duration-300 relative p-6 md:p-8 overflow-hidden rounded-sm">
                 
                 {/* Telemetry Tag */}
                 <div className="absolute top-0 right-0 bg-amber-400/5 border-l border-b border-zinc-700/60 px-4 py-1.5 font-mono text-[10px] text-amber-300 tracking-wider">

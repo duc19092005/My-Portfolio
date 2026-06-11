@@ -99,7 +99,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-          className="bg-neutral-950/40 p-6 border border-zinc-800 rounded-sm relative"
+          className="bg-neutral-950/50 backdrop-blur-md p-6 border border-zinc-700/60 rounded-sm relative"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Sender Name */}

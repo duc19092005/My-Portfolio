@@ -10,7 +10,7 @@ export default function Achievements() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative p-8 text-center border border-amber-300/20 bg-neutral-950 max-w-xl rounded-sm shadow-[0_0_25px_rgba(255,207,145,0.02)] group hover:border-amber-300/30 transition-all duration-300"
+          className="relative p-8 text-center border border-amber-300/20 bg-neutral-950/50 backdrop-blur-md max-w-xl rounded-sm shadow-[0_0_25px_rgba(255,207,145,0.02)] group hover:border-amber-300/30 transition-all duration-300"
         >
           {/* Glowing Award Icon */}
           <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full border border-amber-300 bg-neutral-950 flex items-center justify-center shadow-[0_0_15px_rgba(255,207,145,0.2)]">

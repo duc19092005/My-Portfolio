@@ -161,7 +161,7 @@ export default function Skills() {
                   key={group.id}
                   onMouseEnter={() => setHoveredNode(group.id)}
                   onMouseLeave={() => setHoveredNode(null)}
-                  className={`border p-5 rounded-sm transition-all duration-300 bg-neutral-950/40 ${
+                  className={`border p-5 rounded-sm transition-all duration-300 bg-neutral-950/50 backdrop-blur-md ${
                     isHighlighted
                       ? isAmber
                         ? "border-amber-300 shadow-[0_0_15px_rgba(255,207,145,0.15)] scale-[1.01]"
