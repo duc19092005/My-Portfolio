@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-neutral-950 border-t border-zinc-800 py-12">
-      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 gap-6 max-w-7xl mx-auto font-mono text-[10px] text-zinc-500">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 gap-6 max-w-7xl mx-auto font-mono text-[10px] text-zinc-400">
         {/* Left: Copyright */}
         <a
           href="#hero"
@@ -20,7 +20,7 @@ export default function Footer() {
         </a>
 
         {/* Center: Astronomy Coordinates */}
-        <div className="flex gap-4 opacity-65 text-zinc-600 select-none">
+        <div className="flex gap-4 opacity-65 text-zinc-500 select-none">
           <span>RA 12h 45m 0s</span>
           <span>Dec -28° 22' 54"</span>
         </div>

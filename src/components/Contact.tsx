@@ -40,13 +40,13 @@ export default function Contact() {
             <h2 className="font-display text-4xl font-bold text-amber-100 mb-6 uppercase">
               ESTABLISH CONNECTION
             </h2>
-            <p className="font-mono text-sm md:text-base text-zinc-400 mb-10 max-w-md leading-relaxed">
+            <p className="font-mono text-sm md:text-base text-zinc-300 mb-10 max-w-md leading-relaxed">
               Currently seeking Backend Developer Intern positions to contribute to
               real-world systems. Send your encrypted signal using the terminal stream.
             </p>
 
             {/* Direct Information */}
-            <div className="space-y-4 font-mono text-sm text-zinc-400 mb-8">
+            <div className="space-y-4 font-mono text-sm text-zinc-300 mb-8">
               <div className="flex items-center gap-3">
                 <IconMail size={16} className="text-teal-400 shrink-0" />
                 <a
@@ -76,7 +76,7 @@ export default function Contact() {
           <div className="flex gap-4 mt-6 md:mt-0">
             <a
               href="mailto:duc19092005d@gmail.com"
-              className="w-12 h-12 flex items-center justify-center border border-zinc-800 rounded-sm hover:border-amber-300 hover:text-amber-300 text-zinc-400 transition-colors bg-neutral-950/20"
+              className="w-12 h-12 flex items-center justify-center border border-zinc-700 rounded-sm hover:border-amber-300 hover:text-amber-300 text-zinc-300 transition-colors bg-neutral-950/20"
               aria-label="Email"
             >
               <IconMail size={20} />
@@ -85,7 +85,7 @@ export default function Contact() {
               href="https://github.com"
               target="_blank"
               rel="noreferrer"
-              className="w-12 h-12 flex items-center justify-center border border-zinc-800 rounded-sm hover:border-amber-300 hover:text-amber-300 text-zinc-400 transition-colors bg-neutral-950/20"
+              className="w-12 h-12 flex items-center justify-center border border-zinc-700 rounded-sm hover:border-amber-300 hover:text-amber-300 text-zinc-300 transition-colors bg-neutral-950/20"
               aria-label="GitHub"
             >
               <IconBrandGithub size={20} />
@@ -104,16 +104,16 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Sender Name */}
             <div className="flex flex-col gap-2">
-              <label className="font-mono text-[10px] text-zinc-500 tracking-widest font-bold">
+              <label className="font-mono text-[10px] text-zinc-400 tracking-widest font-bold">
                 SENDER_ID
               </label>
-              <div className="flex items-center border-b border-zinc-800 focus-within:border-amber-300 py-1.5 transition-colors">
+              <div className="flex items-center border-b border-zinc-700/60 focus-within:border-amber-300 py-1.5 transition-colors">
                 <span className="text-amber-300 font-mono text-xs mr-3 select-none">&gt;</span>
                 <input
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-transparent border-none text-zinc-300 focus:outline-none font-mono text-sm placeholder-zinc-700"
+                  className="w-full bg-transparent border-none text-zinc-300 focus:outline-none font-mono text-sm placeholder-zinc-500"
                   placeholder="Your Name"
                   required
                 />
@@ -122,16 +122,16 @@ export default function Contact() {
 
             {/* Sender Email */}
             <div className="flex flex-col gap-2">
-              <label className="font-mono text-[10px] text-zinc-500 tracking-widest font-bold">
+              <label className="font-mono text-[10px] text-zinc-400 tracking-widest font-bold">
                 FREQUENCY_MAIL
               </label>
-              <div className="flex items-center border-b border-zinc-800 focus-within:border-amber-300 py-1.5 transition-colors">
+              <div className="flex items-center border-b border-zinc-700/60 focus-within:border-amber-300 py-1.5 transition-colors">
                 <span className="text-amber-300 font-mono text-xs mr-3 select-none">&gt;</span>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-transparent border-none text-zinc-300 focus:outline-none font-mono text-sm placeholder-zinc-700"
+                  className="w-full bg-transparent border-none text-zinc-300 focus:outline-none font-mono text-sm placeholder-zinc-500"
                   placeholder="email@nexus.com"
                   required
                 />
@@ -140,16 +140,16 @@ export default function Contact() {
 
             {/* Message Body */}
             <div className="flex flex-col gap-2">
-              <label className="font-mono text-[10px] text-zinc-500 tracking-widest font-bold">
+              <label className="font-mono text-[10px] text-zinc-400 tracking-widest font-bold">
                 ENCRYPTED_MESSAGE
               </label>
-              <div className="flex items-start border-b border-zinc-800 focus-within:border-amber-300 py-1.5 transition-colors">
+              <div className="flex items-start border-b border-zinc-700/60 focus-within:border-amber-300 py-1.5 transition-colors">
                 <span className="text-amber-300 font-mono text-xs mr-3 mt-1 select-none">&gt;</span>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={4}
-                  className="w-full bg-transparent border-none text-zinc-300 focus:outline-none font-mono text-sm placeholder-zinc-700 resize-none"
+                  className="w-full bg-transparent border-none text-zinc-300 focus:outline-none font-mono text-sm placeholder-zinc-500 resize-none"
                   placeholder="Initialize data stream..."
                   required
                 />

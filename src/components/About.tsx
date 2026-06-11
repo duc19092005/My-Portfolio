@@ -88,7 +88,7 @@ export default function About() {
             BEHIND THE CODE
           </h2>
 
-          <div className="space-y-4 font-mono text-sm md:text-base text-zinc-400 leading-relaxed mb-10">
+          <div className="space-y-4 font-mono text-sm md:text-base text-zinc-300 leading-relaxed mb-10">
             <p>
               &gt; I am a third-year Software Engineering student at HUFLIT University,
               specializing in Backend Development and system architecture.
@@ -106,46 +106,46 @@ export default function About() {
           </div>
 
           {/* Timeline */}
-          <div className="border-l border-zinc-800 pl-6">
+          <div className="border-l border-zinc-700 pl-6">
             <h3 className="font-mono text-sm text-teal-400 font-bold tracking-widest uppercase mb-4">
               SYSTEM CHRONOLOGY
             </h3>
             <div className="space-y-6">
               <div className="flex gap-4 items-start">
-                <span className="font-mono text-xs text-zinc-500 pt-0.5 w-20 shrink-0">
+                <span className="font-mono text-xs text-zinc-400 pt-0.5 w-20 shrink-0">
                   2026.Q1
                 </span>
                 <div>
-                  <h4 className="text-sm font-bold text-zinc-300">
+                  <h4 className="text-sm font-bold text-zinc-200">
                     Cinema Management System (Solo Project)
                   </h4>
-                  <p className="text-xs text-zinc-500 font-mono mt-0.5">
+                  <p className="text-xs text-zinc-400 font-mono mt-0.5">
                     Architected decoupled backend with 30+ RESTful APIs using ASP.NET Core & MS SQL.
                   </p>
                 </div>
               </div>
               <div className="flex gap-4 items-start">
-                <span className="font-mono text-xs text-zinc-500 pt-0.5 w-20 shrink-0">
+                <span className="font-mono text-xs text-zinc-400 pt-0.5 w-20 shrink-0">
                   2025.Q4
                 </span>
                 <div>
-                  <h4 className="text-sm font-bold text-zinc-300">
+                  <h4 className="text-sm font-bold text-zinc-200">
                     Drug Traceability (dApp) & 3rd Place Hackathon
                   </h4>
-                  <p className="text-xs text-zinc-500 font-mono mt-0.5">
+                  <p className="text-xs text-zinc-400 font-mono mt-0.5">
                     Integrated ExpressJS APIs with blockchain smart contracts at Pione Hackathon 2025.
                   </p>
                 </div>
               </div>
               <div className="flex gap-4 items-start">
-                <span className="font-mono text-xs text-zinc-500 pt-0.5 w-20 shrink-0">
+                <span className="font-mono text-xs text-zinc-400 pt-0.5 w-20 shrink-0">
                   2023 - 2027
                 </span>
                 <div>
-                  <h4 className="text-sm font-bold text-zinc-300">
+                  <h4 className="text-sm font-bold text-zinc-200">
                     Software Engineering Major
                   </h4>
-                  <p className="text-xs text-zinc-500 font-mono mt-0.5">
+                  <p className="text-xs text-zinc-400 font-mono mt-0.5">
                     HUFLIT University (OOP, Data Structures & Algorithms, DBMS).
                   </p>
                 </div>
@@ -163,24 +163,24 @@ export default function About() {
           className="relative h-[400px] md:h-[450px] flex items-center justify-center overflow-hidden border border-zinc-800/20 bg-neutral-950/20 rounded-sm"
         >
           {/* Warped Space-Time Grid (General Relativity Gravity Well) */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-25" viewBox="0 0 400 400" preserveAspectRatio="none">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-40" viewBox="0 0 400 400" preserveAspectRatio="none">
             {/* Horizontal coordinate lines warped towards the center (200, 200) */}
-            <path d="M 0,60 Q 200,120 400,60" fill="none" className="stroke-zinc-900 stroke-[0.5]" />
-            <path d="M 0,110 Q 200,165 400,110" fill="none" className="stroke-zinc-800/80 stroke-[0.5]" />
-            <path d="M 0,160 Q 200,190 400,160" fill="none" className="stroke-zinc-800 stroke-[0.5]" />
-            <path d="M 0,200 Q 200,200 400,200" fill="none" className="stroke-zinc-700/60 stroke-[0.5]" />
-            <path d="M 0,240 Q 200,210 400,240" fill="none" className="stroke-zinc-800 stroke-[0.5]" />
-            <path d="M 0,290 Q 200,235 400,290" fill="none" className="stroke-zinc-800/80 stroke-[0.5]" />
-            <path d="M 0,340 Q 200,280 400,340" fill="none" className="stroke-zinc-900 stroke-[0.5]" />
+            <path d="M 0,60 Q 200,120 400,60" fill="none" className="stroke-zinc-800 stroke-[0.5]" />
+            <path d="M 0,110 Q 200,165 400,110" fill="none" className="stroke-zinc-700/60 stroke-[0.5]" />
+            <path d="M 0,160 Q 200,190 400,160" fill="none" className="stroke-zinc-700 stroke-[0.5]" />
+            <path d="M 0,200 Q 200,200 400,200" fill="none" className="stroke-zinc-600 stroke-[0.5]" />
+            <path d="M 0,240 Q 200,210 400,240" fill="none" className="stroke-zinc-700 stroke-[0.5]" />
+            <path d="M 0,290 Q 200,235 400,290" fill="none" className="stroke-zinc-700/60 stroke-[0.5]" />
+            <path d="M 0,340 Q 200,280 400,340" fill="none" className="stroke-zinc-800 stroke-[0.5]" />
 
             {/* Vertical coordinate lines warped towards the center (200, 200) */}
-            <path d="M 60,0 Q 120,200 60,400" fill="none" className="stroke-zinc-900 stroke-[0.5]" />
-            <path d="M 110,0 Q 165,200 110,400" fill="none" className="stroke-zinc-800/80 stroke-[0.5]" />
-            <path d="M 160,0 Q 190,200 160,400" fill="none" className="stroke-zinc-800 stroke-[0.5]" />
-            <path d="M 200,0 Q 200,200 200,400" fill="none" className="stroke-zinc-700/60 stroke-[0.5]" />
-            <path d="M 240,0 Q 210,200 240,400" fill="none" className="stroke-zinc-800 stroke-[0.5]" />
-            <path d="M 290,0 Q 235,200 290,400" fill="none" className="stroke-zinc-800/80 stroke-[0.5]" />
-            <path d="M 340,0 Q 280,200 340,400" fill="none" className="stroke-zinc-900 stroke-[0.5]" />
+            <path d="M 60,0 Q 120,200 60,400" fill="none" className="stroke-zinc-800 stroke-[0.5]" />
+            <path d="M 110,0 Q 165,200 110,400" fill="none" className="stroke-zinc-700/60 stroke-[0.5]" />
+            <path d="M 160,0 Q 190,200 160,400" fill="none" className="stroke-zinc-700 stroke-[0.5]" />
+            <path d="M 200,0 Q 200,200 200,400" fill="none" className="stroke-zinc-600 stroke-[0.5]" />
+            <path d="M 240,0 Q 210,200 240,400" fill="none" className="stroke-zinc-700 stroke-[0.5]" />
+            <path d="M 290,0 Q 235,200 290,400" fill="none" className="stroke-zinc-700/60 stroke-[0.5]" />
+            <path d="M 340,0 Q 280,200 340,400" fill="none" className="stroke-zinc-800 stroke-[0.5]" />
 
             {/* Concentric gravitational coordinate orbits */}
             <g transform="rotate(12 200 200)">

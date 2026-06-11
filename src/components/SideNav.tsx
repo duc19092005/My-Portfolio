@@ -72,7 +72,7 @@ export default function SideNav() {
             aria-label={`Scroll to ${link.label}`}
           >
             {/* Tooltip Label (slides out on hover) */}
-            <span className="absolute right-8 font-mono text-[9px] text-zinc-500 tracking-widest bg-neutral-950 border border-zinc-800 px-2 py-0.5 rounded-sm opacity-0 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-amber-200 transition-all duration-200 shadow-lg">
+            <span className="absolute right-8 font-mono text-[9px] text-zinc-400 tracking-widest bg-neutral-950 border border-zinc-800 px-2 py-0.5 rounded-sm opacity-0 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-amber-200 transition-all duration-200 shadow-lg">
               {link.label}
             </span>
 

@@ -3,7 +3,7 @@ import { IconAward } from "@tabler/icons-react";
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-20 bg-amber-400/5 border-y border-zinc-800/40 relative overflow-hidden">
+    <section id="achievements" className="py-20 bg-amber-400/5 border-y border-zinc-700/60 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
@@ -29,7 +29,7 @@ export default function Achievements() {
             3rd Place · Team: Dev Chicken HUFLIT
           </h4>
           
-          <p className="font-mono text-sm text-zinc-400 leading-relaxed max-w-md mx-auto">
+          <p className="font-mono text-sm text-zinc-300 leading-relaxed max-w-md mx-auto">
             Awarded for the "Drug Traceability" project, successfully integrating blockchain smart contracts and API logistics tracing.
           </p>
         </motion.div>

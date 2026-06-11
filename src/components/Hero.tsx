@@ -37,7 +37,7 @@ export default function Hero() {
         </h1>
 
         {/* 3. Subtext */}
-        <p className="font-mono text-base md:text-lg text-zinc-400 mb-10 max-w-3xl mx-auto tracking-wide">
+        <p className="font-mono text-base md:text-lg text-zinc-300 mb-10 max-w-3xl mx-auto tracking-wide">
           Backend Developer · Building systems in the dark
         </p>
 

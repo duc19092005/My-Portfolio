@@ -141,7 +141,7 @@ export default function Skills() {
 
                   {/* Planet Label */}
                   <div className="absolute top-12 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                    <span className="font-mono text-[9px] text-zinc-500 font-bold group-hover:text-amber-200 transition-colors">
+                    <span className="font-mono text-[9px] text-zinc-400 font-bold group-hover:text-amber-200 transition-colors">
                       {group.title.split(" ")[0]}
                     </span>
                   </div>
@@ -178,11 +178,11 @@ export default function Skills() {
                   </div>
 
                   {/* Detailed Items List */}
-                  <div className="space-y-3 font-mono text-xs text-zinc-400">
+                  <div className="space-y-3 font-mono text-xs text-zinc-300">
                     {group.items.map((item) => (
-                      <div key={item.name} className="relative pl-3 border-l border-zinc-800">
-                        <span className="font-bold text-sm text-zinc-300 block mb-0.5">{item.name}</span>
-                        <span className="text-xs text-zinc-500 block leading-normal">{item.detail}</span>
+                      <div key={item.name} className="relative pl-3 border-l border-zinc-700">
+                        <span className="font-bold text-sm text-zinc-200 block mb-0.5">{item.name}</span>
+                        <span className="text-xs text-zinc-400 block leading-normal">{item.detail}</span>
                       </div>
                     ))}
                   </div>

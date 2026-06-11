@@ -88,7 +88,7 @@ export default function Projects() {
           DEPLOYED ARTIFACTS
         </h2>
         {/* Quick counter */}
-        <span className="font-mono text-xs text-zinc-600 select-none">
+        <span className="font-mono text-xs text-zinc-400 select-none">
           LOGS [{activeCardIndex + 1}/{projects.length}]
         </span>
       </div>
@@ -102,10 +102,10 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <div key={project.id} className="w-full shrink-0 px-2">
-              <div className="border border-zinc-800 bg-neutral-950/40 hover:border-amber-300/40 transition-colors duration-300 relative p-6 md:p-8 overflow-hidden rounded-sm">
+              <div className="border border-zinc-700/60 bg-neutral-950/40 hover:border-amber-300/40 transition-colors duration-300 relative p-6 md:p-8 overflow-hidden rounded-sm">
                 
                 {/* Telemetry Tag */}
-                <div className="absolute top-0 right-0 bg-amber-400/5 border-l border-b border-zinc-800 px-4 py-1.5 font-mono text-[10px] text-amber-300 tracking-wider">
+                <div className="absolute top-0 right-0 bg-amber-400/5 border-l border-b border-zinc-700/60 px-4 py-1.5 font-mono text-[10px] text-amber-300 tracking-wider">
                   {project.code}
                 </div>
 
@@ -123,11 +123,11 @@ export default function Projects() {
                       )}
                     </div>
 
-                    <span className="font-mono text-xs text-zinc-500 block mb-2">
+                    <span className="font-mono text-xs text-zinc-400 block mb-2">
                       {project.role} · {project.timeline}
                     </span>
 
-                    <ul className="space-y-2 font-mono text-xs md:text-sm text-zinc-400 leading-relaxed mb-6 list-none">
+                    <ul className="space-y-2 font-mono text-xs md:text-sm text-zinc-300 leading-relaxed mb-6 list-none">
                       {project.description.map((desc, i) => (
                         <li key={i} className="relative pl-4">
                           <span className="absolute left-0 text-amber-300">&gt;</span>
@@ -141,7 +141,7 @@ export default function Projects() {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="font-mono text-[10px] text-zinc-400 bg-zinc-900/60 px-2 py-0.5 border border-zinc-800/40 rounded-sm"
+                          className="font-mono text-[10px] text-zinc-300 bg-zinc-900/60 px-2 py-0.5 border border-zinc-700/40 rounded-sm"
                         >
                           {tech}
                         </span>
@@ -231,7 +231,7 @@ export default function Projects() {
         <button
           onClick={handlePrev}
           disabled={activeCardIndex === 0}
-          className={`flex items-center gap-1.5 border border-zinc-800/80 px-4 py-2 bg-neutral-950/50 rounded-sm hover:border-amber-300/40 hover:text-amber-200 transition-all duration-200 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed`}
+          className={`flex items-center gap-1.5 border border-zinc-700/60 px-4 py-2 bg-neutral-950/50 rounded-sm hover:border-amber-300/40 hover:text-amber-200 transition-all duration-200 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed`}
         >
           <IconChevronLeft size={14} />
           <span>[ PREV_LOG ]</span>
@@ -246,7 +246,7 @@ export default function Projects() {
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 activeCardIndex === idx
                   ? "w-6 bg-amber-300 shadow-[0_0_8px_#ffcf91]"
-                  : "w-2 bg-zinc-700 hover:bg-zinc-500"
+                  : "w-2 bg-zinc-600 hover:bg-zinc-400"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
@@ -257,7 +257,7 @@ export default function Projects() {
         <button
           onClick={handleNext}
           disabled={activeCardIndex === projects.length - 1}
-          className={`flex items-center gap-1.5 border border-zinc-800/80 px-4 py-2 bg-neutral-950/50 rounded-sm hover:border-amber-300/40 hover:text-amber-200 transition-all duration-200 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed`}
+          className={`flex items-center gap-1.5 border border-zinc-700/60 px-4 py-2 bg-neutral-950/50 rounded-sm hover:border-amber-300/40 hover:text-amber-200 transition-all duration-200 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed`}
         >
           <span>[ NEXT_LOG ]</span>
           <IconChevronRight size={14} />
