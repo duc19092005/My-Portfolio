@@ -64,7 +64,7 @@ export default function Navbar() {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       window.scrollTo({
-        top: targetElement.offsetTop - 70, // 70px offset for navbar
+        top: targetElement.offsetTop - 86, // 86px offset for navbar
         behavior: "smooth",
       });
     }
@@ -72,7 +72,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#050507]/80 backdrop-blur-md border-b border-[#18181b]">
-      <div className="flex justify-between items-center w-full px-6 md:px-12 py-4 max-w-7xl mx-auto h-[72px]">
+      <div className="flex justify-between items-center w-full px-6 md:px-12 py-4 max-w-7xl mx-auto h-[88px]">
         {/* Brand */}
         <a
           href="#hero"

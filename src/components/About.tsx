@@ -79,7 +79,7 @@ export default function About() {
   return (
     <section 
       id="about" 
-      className="py-24 max-w-7xl mx-auto px-6 md:px-12 snap-start scroll-mt-[72px] bg-[#050507]"
+      className="py-24 max-w-7xl mx-auto px-6 md:px-12 snap-start scroll-mt-[88px] bg-[#050507]"
     >
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column: Bio & Timeline */}

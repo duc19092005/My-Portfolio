@@ -11,7 +11,7 @@ export default function Hero() {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       window.scrollTo({
-        top: targetElement.offsetTop - 70,
+        top: targetElement.offsetTop - 86,
         behavior: "smooth",
       });
     }
@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex flex-col justify-center bg-[#050507] text-[#e5e5e5] px-6 md:px-12 pt-20 border-b border-[#18181b] snap-start scroll-mt-[72px] overflow-hidden"
+      className="relative min-h-[100dvh] flex flex-col justify-center bg-[#050507] text-[#e5e5e5] px-6 md:px-12 pt-20 border-b border-[#18181b] snap-start scroll-mt-[88px] overflow-hidden"
     >
       {/* Structural grid line overlays (faint) */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-25 pointer-events-none" />

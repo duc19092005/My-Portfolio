@@ -8,7 +8,7 @@ export default function Achievements() {
   return (
     <section 
       id="achievements" 
-      className="py-20 bg-[#0c0c0e] border-y border-[#18181b] relative overflow-hidden snap-start scroll-mt-[72px]"
+      className="py-20 bg-[#0c0c0e] border-y border-[#18181b] relative overflow-hidden snap-start scroll-mt-[88px]"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-center">
         <motion.div

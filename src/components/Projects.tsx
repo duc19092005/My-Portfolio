@@ -45,7 +45,7 @@ export default function Projects() {
   return (
     <section 
       id="projects" 
-      className="py-24 max-w-7xl mx-auto px-6 md:px-12 snap-start scroll-mt-[72px] bg-[#050507]"
+      className="py-24 max-w-7xl mx-auto px-6 md:px-12 snap-start scroll-mt-[88px] bg-[#050507]"
     >
       {/* Header */}
       <div className="mb-12 text-left">

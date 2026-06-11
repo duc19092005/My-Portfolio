@@ -58,7 +58,7 @@ export default function Skills() {
   return (
     <section 
       id="skills" 
-      className="py-24 bg-[#0c0c0e] border-y border-[#18181b] snap-start scroll-mt-[72px]"
+      className="py-24 bg-[#0c0c0e] border-y border-[#18181b] snap-start scroll-mt-[88px]"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         {/* Header */}

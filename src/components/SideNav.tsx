@@ -49,7 +49,7 @@ export default function SideNav() {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       window.scrollTo({
-        top: targetElement.offsetTop - 70,
+        top: targetElement.offsetTop - 86,
         behavior: "smooth",
       });
     }
