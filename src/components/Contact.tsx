@@ -26,7 +26,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 max-w-7xl mx-auto px-6 md:px-12">
+    <section id="contact" className="py-24 max-w-7xl mx-auto px-6 md:px-12 snap-start scroll-mt-[72px]">
       <div className="grid md:grid-cols-2 gap-12">
         {/* Left Column: Direct Signal Info */}
         <motion.div

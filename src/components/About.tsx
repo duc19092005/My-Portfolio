@@ -75,7 +75,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="py-24 max-w-7xl mx-auto px-6 md:px-12">
+    <section id="about" className="py-24 max-w-7xl mx-auto px-6 md:px-12 snap-start scroll-mt-[72px]">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column: Bio and Timeline */}
         <motion.div
@@ -106,11 +106,11 @@ export default function About() {
           </div>
 
           {/* Timeline */}
-          <div className="border-l border-zinc-700 pl-6">
-            <h3 className="font-mono text-sm text-teal-400 font-bold tracking-widest uppercase mb-4">
+          <div className="bg-neutral-950/40 backdrop-blur-md border border-zinc-800/60 p-6 rounded-sm shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
+            <h3 className="font-mono text-sm text-teal-400 font-bold tracking-widest uppercase mb-4 border-b border-zinc-800/40 pb-2">
               SYSTEM CHRONOLOGY
             </h3>
-            <div className="space-y-6">
+            <div className="border-l border-zinc-700 pl-4 space-y-6 mt-4">
               <div className="flex gap-4 items-start">
                 <span className="font-mono text-xs text-zinc-400 pt-0.5 w-20 shrink-0">
                   2026.Q1

@@ -3,7 +3,7 @@ import { IconAward } from "@tabler/icons-react";
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-20 bg-amber-400/5 border-y border-zinc-700/60 relative overflow-hidden">
+    <section id="achievements" className="py-20 bg-amber-400/5 border-y border-zinc-700/60 relative overflow-hidden snap-start scroll-mt-[72px]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}

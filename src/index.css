@@ -9,6 +9,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 72px; /* Offset for sticky navbar */
+  scroll-snap-type: y mandatory;
 }
 
 /* Hide cursor class applied by CustomCursor.tsx */

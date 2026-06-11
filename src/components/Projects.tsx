@@ -81,7 +81,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center">
+    <section id="projects" className="py-24 max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center snap-start scroll-mt-[72px]">
       {/* Section Header */}
       <div className="mb-12 flex justify-between items-end">
         <h2 className="font-display text-4xl font-bold text-amber-100 uppercase">

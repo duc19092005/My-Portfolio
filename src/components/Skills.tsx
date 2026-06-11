@@ -75,7 +75,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-neutral-900/30 overflow-hidden">
+    <section id="skills" className="py-24 bg-neutral-900/30 overflow-hidden snap-start scroll-mt-[72px]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="mb-16 text-center">

@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex flex-col justify-center items-center text-center px-6 overflow-hidden bg-neutral-950/20 pt-20"
+      className="relative min-h-[100dvh] flex flex-col justify-center items-center text-center px-6 overflow-hidden bg-neutral-950/20 pt-20 snap-start scroll-mt-[72px]"
     >
       {/* Central Content */}
       <motion.div
