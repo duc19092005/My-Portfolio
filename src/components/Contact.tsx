@@ -8,6 +8,7 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showPhone, setShowPhone] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -65,12 +66,22 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-3">
                 <IconPhone size={16} className="text-[#06b6d4] shrink-0" />
-                <a
-                  href="tel:+84914370300"
-                  className="hover:text-[#f4f4f5] transition-colors"
-                >
-                  +84 914 370 300
-                </a>
+                {showPhone ? (
+                  <a
+                    href="tel:+84914370300"
+                    className="hover:text-[#f4f4f5] transition-colors"
+                  >
+                    +84 914 370 300
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => setShowPhone(true)}
+                    className="text-[#06b6d4] hover:text-[#f4f4f5] transition-colors cursor-pointer text-left font-sans text-sm focus:outline-none flex items-center gap-1.5"
+                  >
+                    <span>+84 914 ••• •••</span>
+                    <span className="text-[10px] bg-[#06b6d4]/10 text-[#06b6d4] border border-[#06b6d4]/20 px-1 rounded-sm tracking-wider uppercase font-semibold">Show</span>
+                  </button>
+                )}
               </div>
               <div className="flex items-start gap-3">
                 <IconMapPin size={16} className="text-[#06b6d4] shrink-0 pt-0.5" />
