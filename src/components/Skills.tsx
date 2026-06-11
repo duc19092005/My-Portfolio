@@ -1,4 +1,4 @@
-import { IconCode, IconCpu, IconDatabase, IconTerminal } from "@tabler/icons-react";
+import { IconCode, IconCpu, IconDatabase, IconTerminal, IconLanguage } from "@tabler/icons-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -8,7 +8,7 @@ interface Skill {
 }
 
 interface SkillGroup {
-  titleKey: "languages" | "frameworks" | "databases" | "tools";
+  title: string;
   icon: React.ReactNode;
   items: Skill[];
 }
@@ -18,7 +18,7 @@ export default function Skills() {
 
   const skillGroups: SkillGroup[] = [
     {
-      titleKey: "languages",
+      title: t.skills.groups.languages,
       icon: <IconCode size={16} className="text-[#06b6d4]" />,
       items: [
         { name: "C# (.NET)", level: 85 },
@@ -27,7 +27,7 @@ export default function Skills() {
       ]
     },
     {
-      titleKey: "frameworks",
+      title: t.skills.groups.frameworks,
       icon: <IconCpu size={16} className="text-[#06b6d4]" />,
       items: [
         { name: "ASP.NET Core API", level: 85 },
@@ -37,7 +37,7 @@ export default function Skills() {
       ]
     },
     {
-      titleKey: "databases",
+      title: t.skills.groups.databases,
       icon: <IconDatabase size={16} className="text-[#06b6d4]" />,
       items: [
         { name: "MS SQL Server", level: 80 },
@@ -45,13 +45,18 @@ export default function Skills() {
       ]
     },
     {
-      titleKey: "tools",
+      title: t.skills.groups.tools,
       icon: <IconTerminal size={16} className="text-[#06b6d4]" />,
       items: [
         { name: "Docker Containers", level: 75 },
         { name: "JWT / RBAC Security", level: 80 },
         { name: "OOP / SOLID / DDD", level: 75 },
       ]
+    },
+    {
+      title: t.skills.groups.spoken,
+      icon: <IconLanguage size={16} className="text-[#06b6d4]" />,
+      items: t.skills.spokenItems
     }
   ];
 
@@ -60,7 +65,7 @@ export default function Skills() {
       id="skills" 
       className="py-24 bg-[#0c0c0e] border-y border-[#18181b] snap-start scroll-mt-[88px]"
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="mb-12 text-left">
           <span className="font-mono text-xs text-[#06b6d4] tracking-widest block mb-2 uppercase font-bold">
@@ -72,48 +77,45 @@ export default function Skills() {
         </div>
 
         {/* Grid Container */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skillGroups.map((group, groupIdx) => {
-            const title = t.skills.groups[group.titleKey];
-            return (
-              <motion.div 
-                key={group.titleKey} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: groupIdx * 0.1, ease: "easeOut" }}
-                className="border border-[#18181b] bg-[#050507] p-6 rounded-sm shadow-md"
-              >
-                <div className="flex items-center gap-2 mb-6 border-b border-[#18181b] pb-3">
-                  {group.icon}
-                  <h3 className="font-mono text-sm text-[#f4f4f5] font-bold uppercase tracking-wider">
-                    {title}
-                  </h3>
-                </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {skillGroups.map((group, groupIdx) => (
+            <motion.div 
+              key={group.title} 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: groupIdx * 0.1, ease: "easeOut" }}
+              className="border border-[#18181b] bg-[#050507] p-6 rounded-sm shadow-md"
+            >
+              <div className="flex items-center gap-2 mb-6 border-b border-[#18181b] pb-3">
+                {group.icon}
+                <h3 className="font-mono text-sm text-[#f4f4f5] font-bold uppercase tracking-wider">
+                  {group.title}
+                </h3>
+              </div>
 
-                <div className="space-y-4">
-                  {group.items.map((skill) => (
-                    <div key={skill.name} className="space-y-1.5">
-                      <div className="flex justify-between text-xs font-mono">
-                        <span className="text-[#a1a1aa]">{skill.name}</span>
-                        <span className="text-[#06b6d4] font-bold">{skill.level}%</span>
-                      </div>
-                      {/* Minimalist progress bar */}
-                      <div className="w-full h-[2px] bg-[#18181b] rounded-full overflow-hidden">
-                        <motion.div 
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
-                          className="h-full bg-[#06b6d4] rounded-full" 
-                        />
-                      </div>
+              <div className="space-y-4">
+                {group.items.map((skill) => (
+                  <div key={skill.name} className="space-y-1.5">
+                    <div className="flex justify-between text-xs font-mono">
+                      <span className="text-[#a1a1aa]">{skill.name}</span>
+                      <span className="text-[#06b6d4] font-bold">{skill.level}%</span>
                     </div>
-                  ))}
-                </div>
-              </motion.div>
-            );
-          })}
+                    {/* Minimalist progress bar */}
+                    <div className="w-full h-[2px] bg-[#18181b] rounded-full overflow-hidden">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+                        className="h-full bg-[#06b6d4] rounded-full" 
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

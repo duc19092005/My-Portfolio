@@ -52,11 +52,16 @@ export const translations = {
       eyebrow: "02 // CAPABILITIES",
       title: "SKILLS INVENTORY",
       groups: {
-        languages: "Languages",
+        languages: "Programming Languages",
         frameworks: "Frameworks & ORMs",
         databases: "Databases",
-        tools: "Tools & Architectures"
-      }
+        tools: "Tools & Architectures",
+        spoken: "Spoken Languages"
+      },
+      spokenItems: [
+        { name: "Vietnamese (Native)", level: 100 },
+        { name: "English (Professional)", level: 75 }
+      ]
     },
     projects: {
       eyebrow: "03 // ARTIFACTS",
@@ -177,11 +182,16 @@ export const translations = {
       eyebrow: "02 // NĂNG LỰC",
       title: "DANH MỤC KỸ NĂNG",
       groups: {
-        languages: "Ngôn ngữ",
+        languages: "Ngôn ngữ lập trình",
         frameworks: "Frameworks & ORMs",
         databases: "Cơ sở dữ liệu",
-        tools: "Công cụ & Kiến trúc"
-      }
+        tools: "Công cụ & Kiến trúc",
+        spoken: "Ngôn ngữ giao tiếp"
+      },
+      spokenItems: [
+        { name: "Tiếng Việt (Bản ngữ)", level: 100 },
+        { name: "Tiếng Anh (Lưu loát)", level: 75 }
+      ]
     },
     projects: {
       eyebrow: "03 // DỮ LIỆU DỰ ÁN",
@@ -302,11 +312,16 @@ export const translations = {
       eyebrow: "02 // ВОЗМОЖНОСТИ",
       title: "КАРТА НАВЫКОВ",
       groups: {
-        languages: "Языки",
+        languages: "Языки программирования",
         frameworks: "Фреймворки и ORM",
         databases: "Базы данных",
-        tools: "Инструменты и Архитектуры"
-      }
+        tools: "Инструменты и Архитектуры",
+        spoken: "Иностранные языки"
+      },
+      spokenItems: [
+        { name: "Вьетнамский (Родной)", level: 100 },
+        { name: "Английский (Профессиональный)", level: 75 }
+      ]
     },
     projects: {
       eyebrow: "03 // АРТИФАКТЫ",
