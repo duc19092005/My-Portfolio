@@ -63,10 +63,13 @@ export default function Navbar() {
     const targetId = href.substring(1);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop - 86, // 86px offset for navbar
-        behavior: "smooth",
-      });
+      // Small timeout ensures the scroll animation isn't canceled by the mobile menu collapsing layout shift
+      setTimeout(() => {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 80);
     }
   };
 

@@ -10,9 +10,9 @@ export default function Hero() {
     const targetId = href.substring(1);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop - 86,
+      targetElement.scrollIntoView({
         behavior: "smooth",
+        block: "start",
       });
     }
   };
