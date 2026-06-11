@@ -753,7 +753,7 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden border border-[#18181b] bg-[#0c0c0e]/30 backdrop-blur-sm rounded-sm shadow-md"
+          className="relative h-[480px] md:h-[620px] flex items-center justify-center overflow-hidden border border-[#18181b] bg-[#0c0c0e]/30 backdrop-blur-sm rounded-sm shadow-md"
         >
           <canvas
             ref={canvasRef}
