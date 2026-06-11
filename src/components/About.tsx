@@ -719,8 +719,19 @@ export default function About() {
             ))}
           </div>
 
+          {/* Interests & Inspirations (Astrophysics hobby) */}
+          <div className="border border-[#18181b] bg-[#0c0c0e]/50 backdrop-blur-sm p-6 rounded-sm shadow-md mt-6">
+            <h3 className="font-mono text-xs text-[#06b6d4] font-bold tracking-widest uppercase mb-3 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#06b6d4] animate-pulse" />
+              {t.about.interestsTitle}
+            </h3>
+            <p className="font-sans text-sm text-[#a1a1aa] leading-relaxed">
+              {t.about.interestsDesc}
+            </p>
+          </div>
+
           {/* Chronology Timeline */}
-          <div className="border border-[#18181b] bg-[#0c0c0e]/50 backdrop-blur-sm p-6 md:p-8 rounded-sm shadow-md mt-10">
+          <div className="border border-[#18181b] bg-[#0c0c0e]/50 backdrop-blur-sm p-6 md:p-8 rounded-sm shadow-md mt-6">
             <h3 className="font-mono text-sm text-[#06b6d4] font-bold tracking-widest uppercase mb-6 border-b border-[#18181b] pb-3">
               {t.about.timelineTitle}
             </h3>

@@ -46,7 +46,9 @@ export const translations = {
           title: "Software Engineering Major",
           desc: "HUFLIT University: Core focus on Data Structures, OOP, Algorithms, and DBMS."
         }
-      ]
+      ],
+      interestsTitle: "Interests & Inspirations",
+      interestsDesc: "Astrophysics & Cosmology — Fascinated by gravity, general relativity, and orbital mechanics. This passion for understanding complex, large-scale systems translates directly into my work as a backend engineer, where I design structured, deterministic, and highly resilient distributed systems."
     },
     skills: {
       eyebrow: "02 // EXPERTISE",
@@ -176,7 +178,9 @@ export const translations = {
           title: "Chuyên ngành Kỹ thuật Phần mềm",
           desc: "Đại học HUFLIT: Tập trung nghiên cứu Cấu trúc dữ liệu, OOP, Giải thuật và Hệ quản trị CSDL."
         }
-      ]
+      ],
+      interestsTitle: "Cảm hứng & Sở thích",
+      interestsDesc: "Vật lý thiên văn & Vũ trụ học — Đam mê tìm hiểu về trọng lực, thuyết tương đối và cơ học quỹ đạo. Niềm cảm hứng khám phá các hệ thống quy mô lớn, phức tạp trong vũ trụ được tôi chuyển hóa trực tiếp vào tư duy backend, giúp tôi thiết kế các hệ thống phân tán chặt chẽ, tối ưu và có độ bền bỉ cao."
     },
     skills: {
       eyebrow: "02 // KỸ NĂNG",
@@ -306,7 +310,9 @@ export const translations = {
           title: "Программная инженерия (Специальность)",
           desc: "Университет HUFLIT: Основной упор на структуры данных, ООП, алгоритмы и СУБД."
         }
-      ]
+      ],
+      interestsTitle: "Интересы и Вдохновение",
+      interestsDesc: "Астрофизика и Космология — Увлечен гравитацией, общей теорией относительности и орбитальной механикой. Эта страсть к пониманию сложных крупномасштабных систем напрямую переносится на мою работу в качестве backend-разработчика, где я проектирую структурированные, детерминированные и высоконадежные распределенные системы."
     },
     skills: {
       eyebrow: "02 // ЭКСПЕРТИЗА",
