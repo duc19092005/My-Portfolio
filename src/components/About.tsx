@@ -52,13 +52,16 @@ export default function About() {
       const dx = e.clientX - dragStartRef.current.x;
       const dy = e.clientY - dragStartRef.current.y;
       
-      // Sensitivity factor
-      const sensitivity = 0.005;
-      rotationRef.current.targetAzimuth = dragStartRef.current.azimuth + dx * sensitivity;
-      // Clamp elevation between 0.15 (10 deg) and 1.35 (77 deg) to keep 3D projection looking good
-      rotationRef.current.targetElevation = Math.max(0.15, Math.min(1.35, dragStartRef.current.elevation + dy * sensitivity));
+      // Sensitivity factors
+      const sensitivityX = 0.007;
+      const sensitivityY = 0.005;
+      
+      // Dragging right (dx > 0) -> rotates camera left (clockwise object rotation, azimuth decreases)
+      rotationRef.current.targetAzimuth = dragStartRef.current.azimuth - dx * sensitivityX;
+      // Dragging down (dy > 0) -> tilts camera up (flatter look, elevation decreases)
+      rotationRef.current.targetElevation = Math.max(0.12, Math.min(1.40, dragStartRef.current.elevation - dy * sensitivityY));
     } else {
-      // Handle hover parallax
+      // Handle hover parallax (subtle responsive tilt)
       const mx = e.clientX - rect.left - rect.width / 2;
       const my = e.clientY - rect.top - rect.height / 2;
       hoverRef.current.targetX = mx * 0.0003;
@@ -91,7 +94,7 @@ export default function About() {
       name: ".NET",
       r: 95,
       angle: 0,
-      speed: 0.012, // Radian speed per frame (Theory of relativity: closer orbits spin faster)
+      speed: 0.012, // Radian speed per frame (closer orbits spin faster)
       baseRadius: 15,
     };
     
@@ -151,6 +154,10 @@ export default function About() {
       const R_horizon = scaleBase * 0.18;
       
       // Update camera angles with interpolation (lerp) for smooth movements
+      if (!rotationRef.current.dragging) {
+        rotationRef.current.targetAzimuth += 0.0012; // slow continuous auto-rotation
+      }
+      
       rotationRef.current.azimuth += (rotationRef.current.targetAzimuth - rotationRef.current.azimuth) * 0.1;
       rotationRef.current.elevation += (rotationRef.current.targetElevation - rotationRef.current.elevation) * 0.1;
       
@@ -158,8 +165,8 @@ export default function About() {
       hoverRef.current.x += (hoverRef.current.targetX - hoverRef.current.x) * 0.05;
       hoverRef.current.y += (hoverRef.current.targetY - hoverRef.current.y) * 0.05;
 
-      // Final camera angles (azimuth & elevation) combining base + drag + hover
-      const azimuth = rotationRef.current.azimuth + hoverRef.current.x + (rotationRef.current.dragging ? 0 : time * 0.0012);
+      // Final camera angles combining base + drag + hover
+      const azimuth = rotationRef.current.azimuth + hoverRef.current.x;
       const elevation = rotationRef.current.elevation + hoverRef.current.y;
       
       const cosAz = Math.cos(azimuth);
@@ -221,8 +228,11 @@ export default function About() {
         
         // Rotate around X axis (elevation / tilt)
         const cx3d = rx;
-        const cy3d = ry * cosEl - rz * sinEl;
-        const cz3d = ry * sinEl + rz * cosEl; // Depth from screen plane (positive is closer, negative is deeper)
+        // CORRECTED GENERAL RELATIVITY PROJECTION:
+        // A negative rz (warping downwards) must shift the screen position DOWN (smaller cy3d),
+        // and increase depth (further away, smaller cz3d/persp).
+        const cy3d = - ry * sinEl + rz * cosEl;
+        const cz3d = ry * cosEl + rz * sinEl; 
         
         // Perspective divide
         const persp = camD / (camD - cz3d);
@@ -434,7 +444,7 @@ export default function About() {
       
       // Black Hole Event Horizon Shadow
       renderQueue.push({
-        depth: pCenter.zDepth, // z = 0
+        depth: pCenter.zDepth, 
         draw: () => {
           // Inner core boundary (absolute shadow)
           ctx.beginPath();
@@ -483,7 +493,6 @@ export default function About() {
       });
 
       // 6. PLANET 1 (.NET)
-      // Position calculation in 3D
       const p1Drag = getFrameDragAngle(planetDotNet.r);
       const p1X_raw = planetDotNet.r * Math.cos(planetDotNet.angle + p1Drag);
       const p1Y_raw = planetDotNet.r * Math.sin(planetDotNet.angle + p1Drag);
