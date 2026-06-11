@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { IconArrowRight } from "@tabler/icons-react";
+import { IconArrowRight, IconTerminal } from "@tabler/icons-react";
 
 export default function Hero() {
   const handleScrollClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -17,50 +17,101 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex flex-col justify-center items-center text-center px-6 overflow-hidden bg-neutral-950/20 pt-20 snap-start scroll-mt-[72px]"
+      className="relative min-h-[100dvh] flex flex-col justify-center bg-[#050507] text-[#e5e5e5] px-6 md:px-12 pt-20 border-b border-[#18181b] snap-start scroll-mt-[72px] overflow-hidden"
     >
-      {/* Central Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 max-w-5xl px-8 py-12 md:px-16 md:py-16 bg-neutral-950/30 backdrop-blur-[6px] border border-zinc-800/40 rounded-sm shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
-      >
-        {/* 1. Eyebrow */}
-        <span className="font-mono text-sm text-teal-400 tracking-[0.25em] block mb-4">
-          INITIALIZING SYSTEMS...
-        </span>
+      {/* Structural grid line overlays (faint) */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-25 pointer-events-none" />
 
-        {/* 2. Headline */}
-        <h1 className="font-display text-5xl md:text-8xl font-bold text-amber-100 tracking-[0.18em] mb-6 uppercase leading-none">
-          TRẦN ANH ĐỨC
-        </h1>
+      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-12 gap-12 items-center relative z-10">
+        {/* Left Column: Text Stack */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="md:col-span-8 flex flex-col items-start text-left"
+        >
+          {/* Eyebrow */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#18181b] bg-[#0c0c0e] mb-6">
+            <IconTerminal size={12} className="text-[#06b6d4]" />
+            <span className="font-mono text-[10px] tracking-widest text-[#a1a1aa] uppercase">SYSTEMS_ACTIVE</span>
+          </div>
 
-        {/* 3. Subtext */}
-        <p className="font-mono text-base md:text-lg text-zinc-300 mb-10 max-w-3xl mx-auto tracking-wide">
-          Backend Developer · Building systems in the dark
-        </p>
+          {/* Headline */}
+          <h1 className="font-sans text-5xl md:text-7xl font-extrabold tracking-tight text-[#f4f4f5] leading-none mb-6">
+            TRẦN ANH ĐỨC
+          </h1>
+          
+          <h2 className="text-lg md:text-xl font-mono text-[#06b6d4] mb-6 font-semibold tracking-wide uppercase">
+            Backend Developer / Systems Engineer
+          </h2>
 
-        {/* 4. CTAs */}
-        <div className="flex justify-center">
-          <a
-            href="#about"
-            onClick={(e) => handleScrollClick(e, "#about")}
-            className="group inline-flex items-center gap-2 font-mono text-sm text-amber-300 border border-amber-300/30 px-6 py-3.5 bg-amber-950/10 hover:bg-amber-300 hover:text-neutral-950 transition-all rounded-sm duration-200 active:scale-95 cursor-pointer"
-          >
-            Explore mission logs
-            <IconArrowRight
-              size={14}
-              className="group-hover:translate-x-1 transition-transform"
-            />
-          </a>
-        </div>
-      </motion.div>
+          {/* Subtext */}
+          <p className="text-base md:text-lg text-[#a1a1aa] max-w-2xl mb-8 leading-relaxed">
+            Building highly scalable backend services and robust system architectures. Specializing in secure API design, database performance optimization, and reliable infrastructure.
+          </p>
 
-      {/* Telemetry Footer at Bottom of Viewport */}
-      <div className="absolute bottom-10 left-0 w-full px-6 md:px-12 flex justify-between font-mono text-[10px] text-zinc-600 select-none z-10 pointer-events-none">
-        <span>RA 12h 45m 0s | Dec -28° 22' 54"</span>
-        <span>SYS_TEMP: 32.4°C | UPTIME: 99.98%</span>
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              onClick={(e) => handleScrollClick(e, "#projects")}
+              className="inline-flex items-center gap-2 bg-[#f4f4f5] text-[#050507] hover:bg-[#e4e4e7] transition-all px-6 py-3 rounded-sm font-semibold text-sm cursor-pointer shadow-lg active:scale-95"
+            >
+              <span>View My Projects</span>
+              <IconArrowRight size={16} />
+            </a>
+            <a
+              href="#contact"
+              onClick={(e) => handleScrollClick(e, "#contact")}
+              className="inline-flex items-center gap-2 border border-[#18181b] hover:border-zinc-700 bg-[#0c0c0e] text-[#f4f4f5] transition-all px-6 py-3 rounded-sm font-medium text-sm cursor-pointer active:scale-95"
+            >
+              <span>Get In Touch</span>
+            </a>
+          </div>
+        </motion.div>
+
+        {/* Right Column: Decorative Technical Monitor Card */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+          className="md:col-span-4 hidden md:flex justify-center relative"
+        >
+          <div className="absolute w-64 h-64 bg-[#06b6d4]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="border border-[#18181b] bg-[#0c0c0e] p-8 rounded-sm w-72 h-72 flex flex-col justify-between relative shadow-2xl">
+            <div className="flex justify-between items-start">
+              <span className="font-mono text-[10px] text-[#06b6d4] font-bold">SYS_MONITOR</span>
+              <div className="w-2 h-2 rounded-full bg-[#06b6d4] animate-pulse" />
+            </div>
+            
+            <div className="py-6 flex flex-col justify-center flex-grow">
+              <div className="h-1 bg-[#18181b] w-full rounded-full overflow-hidden relative">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: "99.98%" }}
+                  transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
+                  className="h-full bg-[#06b6d4]"
+                />
+              </div>
+              <span className="font-mono text-[9px] text-zinc-500 mt-2 block text-right">UPTIME SLA: 99.98%</span>
+            </div>
+
+            <div className="space-y-2 font-mono text-xs text-[#a1a1aa]">
+              <div className="flex justify-between border-b border-[#18181b]/50 pb-1">
+                <span>PORT_BIND</span>
+                <span className="text-[#f4f4f5]">8080</span>
+              </div>
+              <div className="flex justify-between border-b border-[#18181b]/50 pb-1">
+                <span>DATABASE</span>
+                <span className="text-[#f4f4f5]">SQL Server</span>
+              </div>
+              <div className="flex justify-between border-b border-[#18181b]/50 pb-1">
+                <span>ENV</span>
+                <span className="text-teal-400">Production</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

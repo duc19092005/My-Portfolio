@@ -1,5 +1,4 @@
 import CustomCursor from "./components/CustomCursor";
-import GalaxyBackground from "./components/GalaxyBackground";
 import SideNav from "./components/SideNav";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -12,10 +11,9 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="relative min-h-[100dvh] bg-neutral-950 text-zinc-100 selection:bg-amber-300 selection:text-neutral-950 font-sans antialiased overflow-x-hidden">
+    <div className="relative min-h-[100dvh] bg-[#050507] text-[#e5e5e5] selection:bg-[#27272a] selection:text-[#f4f4f5] font-sans antialiased overflow-x-hidden">
       {/* Interactive overlays */}
       <CustomCursor />
-      <GalaxyBackground />
       <SideNav />
 
       {/* Sticky header */}

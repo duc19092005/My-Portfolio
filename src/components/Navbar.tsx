@@ -8,11 +8,11 @@ interface NavLink {
 }
 
 const links: NavLink[] = [
-  { label: "OBSERVER", href: "#hero" },
-  { label: "OPERATOR", href: "#about" },
-  { label: "CHART", href: "#skills" },
-  { label: "LOGS", href: "#projects" },
-  { label: "SIGNAL", href: "#contact" },
+  { label: "ABOUT", href: "#about" },
+  { label: "SKILLS", href: "#skills" },
+  { label: "PROJECTS", href: "#projects" },
+  { label: "AWARDS", href: "#achievements" },
+  { label: "CONTACT", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -55,18 +55,18 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-neutral-950/75 backdrop-blur-xl border-b border-zinc-800">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#050507]/80 backdrop-blur-md border-b border-[#18181b]">
       <div className="flex justify-between items-center w-full px-6 md:px-12 py-4 max-w-7xl mx-auto h-[72px]">
         {/* Brand */}
         <a
           href="#hero"
           onClick={(e) => handleLinkClick(e, "#hero")}
-          className="text-lg font-bold text-amber-100 tracking-tighter hover:text-amber-200 transition-colors"
+          className="text-lg font-extrabold text-[#f4f4f5] tracking-tight hover:text-[#06b6d4] transition-colors"
         >
-          ASTRO-CORE <span className="text-amber-300 font-mono text-sm ml-1">v1.0</span>
+          TAD<span className="text-[#06b6d4]">.dev</span>
         </a>
 
-        {/* Desktop Links (Single Line Desktop) */}
+        {/* Desktop Links */}
         <div className="hidden md:flex gap-8 items-center">
           {links.map((link) => {
             const isActive = activeSection === link.href.substring(1);
@@ -75,17 +75,17 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className={`font-mono text-xs tracking-widest transition-all relative py-1 ${
+                className={`font-mono text-[10px] tracking-widest transition-all relative py-1 ${
                   isActive
-                    ? "text-amber-200"
-                    : "text-zinc-400 hover:text-amber-100"
+                    ? "text-[#f4f4f5]"
+                    : "text-[#a1a1aa] hover:text-[#f4f4f5]"
                 }`}
               >
                 {link.label}
                 {isActive && (
                   <motion.span
                     layoutId="activeNavLine"
-                    className="absolute bottom-0 left-0 w-full h-[1px] bg-amber-200"
+                    className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#06b6d4]"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -99,20 +99,20 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={(e) => handleLinkClick(e, "#contact")}
-            className="flex items-center gap-2 font-mono text-xs text-amber-200 px-4 py-2 border border-amber-200/40 rounded-sm bg-amber-950/10 hover:bg-amber-200 hover:text-neutral-950 transition-all duration-200 active:scale-95"
+            className="flex items-center gap-2 font-mono text-[10px] text-[#06b6d4] px-4 py-2 border border-[#06b6d4]/30 rounded-sm bg-[#06b6d4]/5 hover:bg-[#06b6d4] hover:text-[#050507] transition-all duration-200 active:scale-95 font-semibold"
           >
-            <IconTerminal size={14} />
-            <span>SYSTEM.sh</span>
+            <IconTerminal size={12} />
+            <span>CONTACT.sh</span>
           </a>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-zinc-400 hover:text-amber-200 transition-colors cursor-pointer"
+          className="md:hidden text-zinc-400 hover:text-[#06b6d4] transition-colors cursor-pointer"
           aria-label="Toggle Menu"
         >
-          {isOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
+          {isOpen ? <IconX size={20} /> : <IconMenu2 size={20} />}
         </button>
       </div>
 
@@ -123,8 +123,8 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="md:hidden bg-neutral-950 border-b border-zinc-800 overflow-hidden"
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className="md:hidden bg-[#0c0c0e] border-b border-[#18181b] overflow-hidden"
           >
             <div className="flex flex-col px-6 py-6 gap-6">
               {links.map((link) => {
@@ -134,8 +134,8 @@ export default function Navbar() {
                     key={link.label}
                     href={link.href}
                     onClick={(e) => handleLinkClick(e, link.href)}
-                    className={`font-mono text-sm tracking-widest ${
-                      isActive ? "text-amber-200 font-bold" : "text-zinc-400"
+                    className={`font-mono text-xs tracking-widest ${
+                      isActive ? "text-[#06b6d4] font-bold" : "text-[#a1a1aa]"
                     }`}
                   >
                     {link.label}
@@ -145,10 +145,10 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={(e) => handleLinkClick(e, "#contact")}
-                className="flex items-center justify-center gap-2 font-mono text-xs text-amber-200 py-3 border border-amber-200/30 rounded bg-amber-950/10 hover:bg-amber-200 hover:text-neutral-950 transition-all active:scale-95"
+                className="flex items-center justify-center gap-2 font-mono text-xs text-[#06b6d4] py-3 border border-[#06b6d4]/30 rounded bg-[#06b6d4]/5 hover:bg-[#06b6d4] hover:text-[#050507] transition-all active:scale-95"
               >
-                <IconTerminal size={14} />
-                <span>SYSTEM.sh</span>
+                <IconTerminal size={12} />
+                <span>CONTACT.sh</span>
               </a>
             </div>
           </motion.div>

@@ -8,44 +8,38 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-neutral-950 border-t border-zinc-800 py-12">
-      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 gap-6 max-w-7xl mx-auto font-mono text-[10px] text-zinc-400">
+    <footer className="bg-[#050507] border-t border-[#18181b] py-12">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 gap-6 max-w-7xl mx-auto font-mono text-[10px] text-zinc-500">
         {/* Left: Copyright */}
         <a
           href="#hero"
           onClick={handleScrollTop}
-          className="hover:text-amber-200 transition-colors uppercase tracking-widest"
+          className="hover:text-[#06b6d4] transition-colors uppercase tracking-widest font-semibold"
         >
           © 2026 TRAN ANH DUC
         </a>
 
-        {/* Center: Astronomy Coordinates */}
-        <div className="flex gap-4 opacity-65 text-zinc-500 select-none">
-          <span>RA 12h 45m 0s</span>
-          <span>Dec -28° 22' 54"</span>
-        </div>
-
         {/* Right: Technical Links */}
         <div className="flex gap-6">
           <a
-            href="#"
-            className="hover:text-teal-400 transition-colors tracking-widest uppercase"
+            href="#about"
+            className="hover:text-[#06b6d4] transition-colors tracking-widest uppercase"
           >
-            TELEMETRY
+            ABOUT
           </a>
           <a
-            href="#"
-            className="hover:text-teal-400 transition-colors tracking-widest uppercase"
+            href="#projects"
+            className="hover:text-[#06b6d4] transition-colors tracking-widest uppercase"
           >
-            ENCRYPTION
+            PROJECTS
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/duc19092005/My-Portfolio"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-teal-400 transition-colors tracking-widest uppercase"
+            className="hover:text-[#06b6d4] transition-colors tracking-widest uppercase"
           >
-            SOURCE_CODE
+            GITHUB
           </a>
         </div>
       </div>
