@@ -11,7 +11,7 @@ export const translations = {
     hero: {
       eyebrow: "System Online",
       title: "TRẦN ANH ĐỨC",
-      subtitle: "Backend Developer | Building scalable & reliable systems",
+      subtitle: "Intern Backend Developer",
       subtext: "Building highly scalable backend services and robust system architectures. Specializing in secure API design, database performance optimization, and reliable infrastructure.",
       btnProjects: "View My Projects",
       btnContact: "Get In Touch",
@@ -103,7 +103,7 @@ export const translations = {
     contact: {
       eyebrow: "05 // CONTACT",
       title: "Get In Touch",
-      subtext: "I am currently seeking Backend Developer Intern & Junior positions to collaborate on real-world systems. Drop me a line, and let's build something secure and scalable together.",
+      subtext: "I am currently seeking Backend Developer Intern positions to collaborate on real-world systems. Drop me a line, and let's build something secure and scalable together.",
       address: "Binh Thanh District, Ho Chi Minh City, Vietnam",
       labelName: "SENDER NAME",
       labelEmail: "EMAIL ADDRESS",
@@ -143,7 +143,7 @@ export const translations = {
     hero: {
       eyebrow: "System Online",
       title: "TRẦN ANH ĐỨC",
-      subtitle: "Backend Developer | Xây dựng hệ thống scalable & đáng tin cậy",
+      subtitle: "Intern Backend Developer",
       subtext: "Xây dựng các dịch vụ backend hiệu năng cao và kiến trúc hệ thống bền vững. Chuyên sâu về thiết kế API bảo mật, tối ưu hóa cơ sở dữ liệu và hạ tầng đáng tin cậy.",
       btnProjects: "Xem Dự Án Của Tôi",
       btnContact: "Liên Hệ Ngay",
@@ -234,8 +234,8 @@ export const translations = {
     },
     contact: {
       eyebrow: "05 // LIÊN HỆ",
-      title: "Get In Touch",
-      subtext: "Tôi hiện đang tìm kiếm cơ hội thực tập và vị trí Junior Backend Developer để cống hiến cho các dự án thực tế. Hãy để lại tin nhắn và cùng nhau xây dựng các hệ thống bảo mật, ổn định.",
+      title: "Liên Hệ",
+      subtext: "Tôi hiện đang tìm kiếm cơ hội thực tập vị trí Backend Developer để cống hiến cho các dự án thực tế. Hãy để lại tin nhắn và cùng nhau xây dựng các hệ thống bảo mật, ổn định.",
       address: "Quận Bình Thạnh, TP. Hồ Chí Minh, Việt Nam",
       labelName: "TÊN NGƯỜI GỬI",
       labelEmail: "ĐỊA CHỈ EMAIL",
@@ -275,7 +275,7 @@ export const translations = {
     hero: {
       eyebrow: "System Online",
       title: "TRẦN ANH ĐỨC",
-      subtitle: "Backend Developer | Разработка масштабируемых и надежных систем",
+      subtitle: "Intern Backend Developer",
       subtext: "Разработка высокомасштабируемых серверных служб и надежных системных архитектур. Специализируюсь на безопасном проектировании API, оптимизации баз данных и надежной инфраструктуре.",
       btnProjects: "Посмотреть Мои Проекты",
       btnContact: "Связаться Со Мной",
@@ -366,8 +366,8 @@ export const translations = {
     },
     contact: {
       eyebrow: "05 // КОНТАКТЫ",
-      title: "Get In Touch",
-      subtext: "В данный момент я ищу вакансии Backend Developer Intern / Junior для участия в коммерческих проектах. Оставьте сообщение, и давайте построим надежную систему вместе.",
+      title: "Связаться со мной",
+      subtext: "В данный момент я ищу стажировку (Intern) Backend-разработчика для участия в коммерческих проектах. Оставьте сообщение, и давайте построим надежную систему вместе.",
       address: "Район Биньтхань, Хошимин, Вьетнам",
       labelName: "ИМЯ ОТПРАВИТЕЛЯ",
       labelEmail: "АДРЕС EMAIL",

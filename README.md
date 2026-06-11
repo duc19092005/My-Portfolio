@@ -1,6 +1,6 @@
-# ASTRO-CORE Developer Portfolio
+# Trần Anh Đức - Backend Developer Portfolio
 
-A responsive, high-tech, space-themed developer portfolio built for **Trần Anh Đức (Backend Developer)**. The interface features a custom interactive telemetry design inspired by sci-fi dashboards and relativistic physics, running on a permanent dark theme locked to deep space.
+A responsive, high-tech, space-themed developer portfolio built for **Trần Anh Đức (Intern Backend Developer)**. The interface features a custom interactive telemetry design inspired by sci-fi dashboards and relativistic physics, running on a permanent dark theme locked to deep space.
 
 ---
 
