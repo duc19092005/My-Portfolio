@@ -92,10 +92,10 @@ export default function Navbar() {
                 key={link.key}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className={`font-mono text-[10px] tracking-widest transition-all relative py-1 ${
+                className={`font-sans text-[11px] font-medium tracking-wider transition-all relative py-1 uppercase ${
                   isActive
-                    ? "text-[#f4f4f5]"
-                    : "text-[#a1a1aa] hover:text-[#f4f4f5]"
+                    ? "text-[#f4f4f5] font-bold"
+                    : "text-[#a1a1aa] hover:text-[#f4f4f5] hover:font-bold"
                 }`}
               >
                 {label}
@@ -192,7 +192,7 @@ export default function Navbar() {
                     key={link.key}
                     href={link.href}
                     onClick={(e) => handleLinkClick(e, link.href)}
-                    className={`font-mono text-xs tracking-widest ${
+                    className={`font-sans text-xs font-medium tracking-wider uppercase ${
                       isActive ? "text-[#06b6d4] font-bold" : "text-[#a1a1aa]"
                     }`}
                   >
