@@ -1,0 +1,101 @@
+import { useState, useEffect } from "react";
+import { motion } from "motion/react";
+
+interface SideLink {
+  label: string;
+  href: string;
+}
+
+const sideLinks: SideLink[] = [
+  { label: "OBSERVER", href: "#hero" },
+  { label: "OPERATOR", href: "#about" },
+  { label: "CHART", href: "#skills" },
+  { label: "LOGS", href: "#projects" },
+  { label: "TELEMETRY", href: "#achievements" },
+  { label: "SIGNAL", href: "#contact" },
+];
+
+export default function SideNav() {
+  const [activeSection, setActiveSection] = useState("hero");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + window.innerHeight / 2;
+      for (const link of sideLinks) {
+        const id = link.href.substring(1);
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            setActiveSection(id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Initial check
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 70,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col items-center gap-6 select-none">
+      {/* Center Line tracker */}
+      <div className="absolute top-2 bottom-2 w-[1px] bg-zinc-800/60 z-0 pointer-events-none" />
+
+      {/* Navigation Bullets */}
+      {sideLinks.map((link) => {
+        const targetId = link.href.substring(1);
+        const isActive = activeSection === targetId;
+
+        return (
+          <a
+            key={link.label}
+            href={link.href}
+            onClick={(e) => handleClick(e, link.href)}
+            className="relative flex items-center justify-center p-2 group cursor-pointer z-10"
+            aria-label={`Scroll to ${link.label}`}
+          >
+            {/* Tooltip Label (slides out on hover) */}
+            <span className="absolute right-8 font-mono text-[9px] text-zinc-500 tracking-widest bg-neutral-950 border border-zinc-800 px-2 py-0.5 rounded-sm opacity-0 translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-amber-200 transition-all duration-200 shadow-lg">
+              {link.label}
+            </span>
+
+            {/* Glowing Active Ring */}
+            {isActive && (
+              <motion.div
+                layoutId="activeBulletRing"
+                className="absolute w-5 h-5 border border-amber-300/40 rounded-full shadow-[0_0_8px_rgba(255,207,145,0.2)]"
+                transition={{ type: "spring", stiffness: 350, damping: 25 }}
+              />
+            )}
+
+            {/* Bullet Dot */}
+            <div
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                isActive
+                  ? "bg-amber-300 scale-125 shadow-[0_0_8px_#ffcf91]"
+                  : "bg-zinc-600 group-hover:bg-zinc-400 group-hover:scale-110"
+              }`}
+            />
+          </a>
+        );
+      })}
+    </div>
+  );
+}

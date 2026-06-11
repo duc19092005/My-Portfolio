@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px; /* Offset for sticky navbar */
+}
+
+/* Hide cursor class applied by CustomCursor.tsx */
+.no-cursor,
+.no-cursor * {
+  cursor: none !important;
+}
+
+body {
+  background-color: #0b0e16; /* deep space container lowest */
+  color: #e0e2ee;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+/* Custom selection styling */
+::selection {
+  background-color: #ffcf91; /* Primary accent */
+  color: #291800; /* On-primary */
+}
+
+/* Monospace text styles */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0e16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 207, 145, 0.1);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 207, 145, 0.4);
+}
+
+/* Desktop layout rules (sections fit viewport and center content) */
+@media (min-width: 768px) {
+  section {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
