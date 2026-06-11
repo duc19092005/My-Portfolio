@@ -24,7 +24,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 max-w-5xl"
+        className="relative z-10 max-w-5xl px-8 py-12 md:px-16 md:py-16 bg-neutral-950/30 backdrop-blur-[6px] border border-zinc-800/40 rounded-sm shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
       >
         {/* 1. Eyebrow */}
         <span className="font-mono text-sm text-teal-400 tracking-[0.25em] block mb-4">
