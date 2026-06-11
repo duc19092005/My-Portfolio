@@ -84,12 +84,12 @@ export default function Projects() {
 
               <div>
                 {/* Badge & Title */}
-                <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-4">
                   <h3 className="text-xl md:text-2xl font-bold text-[#f4f4f5] tracking-wide uppercase group-hover:text-[#06b6d4] transition-colors leading-tight">
                     {trans.title}
                   </h3>
                   {badgeText && (
-                    <span className="px-2 py-0.5 bg-[#06b6d4]/10 text-[#06b6d4] font-mono text-[8px] rounded-sm border border-[#06b6d4]/20 uppercase tracking-widest shrink-0 mt-1">
+                    <span className="px-2 py-0.5 bg-[#06b6d4]/10 text-[#06b6d4] font-mono text-[8px] rounded-sm border border-[#06b6d4]/20 uppercase tracking-widest sm:shrink-0 self-start mt-1">
                       {badgeText}
                     </span>
                   )}
